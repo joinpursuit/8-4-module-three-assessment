@@ -18,7 +18,7 @@ function Movies() {
     <div>
       <h1>Select a Movie</h1>
       <select>
-        {movies.map(movie => <option>{movie.title}</option>)}
+        {movies.map(movie => <option key={movie.id} value={movie.title}>{movie.title}</option>)}
       </select>
     </div>
   )
