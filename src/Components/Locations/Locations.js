@@ -3,7 +3,10 @@ import "./Locations.css"
 
 function Locations() {
   return (
-    <div>Locations</div>
+    <div>
+      <h1>List of Locations</h1>
+      <button>Show Locations</button>
+    </div>
   )
 }
 
