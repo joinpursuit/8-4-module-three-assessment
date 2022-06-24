@@ -1,25 +1,46 @@
-import logo from "./logo.svg";
 import "./App.css";
+import NavBar from "./Components/NavBar";
+import Movies from "./Components/Movies";
+import People from "./Components/People";
+import Locations from "./Components/Locations";
+import React, {useEffect, useState} from "react";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
 
 function App() {
+
+    const [movies, setMovies] = useState([])
+    const [people, setPeople] = useState([])
+    const [locations, setLocations] = useState([])
+
+    useEffect(()=>{
+
+      fetch(
+
+      )
+
+
+
+    })
+
+
+
   return (
+    <Router>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <NavBar/>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/movies" element={<Movies/>}/>
+      <Route path="/people" element={<People/>}/>
+      <Route path="/locations" element={<Locations/>}/>
+    </Routes>
+     
+        
     </div>
+    </Router>
   );
 }
 
 export default App;
+
+{/* <img src={logo} className="App-logo" alt="logo" /> */}
