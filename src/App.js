@@ -1,23 +1,31 @@
 import logo from "./logo.svg";
 import "./App.css";
 
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+
+
+import { nav as Nav } from "./components/nav";
+import { home as Home } from "./components/home";
+import { Movies } from "./components/movieList";
+import { peopleSearch as People } from "./components/peopleSearch";
+import { locations as Locations } from "./components/locations";
+
 function App() {
+  //useEffect in indivdual components to fetch the relevant data
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <main>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/people" element={<People />} />
+          <Route path="/locations" element={<Locations />} />
+        </Routes>
+      </main>
     </div>
   );
 }
