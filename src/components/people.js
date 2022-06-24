@@ -1,24 +1,25 @@
 import { React, useEffect, useState } from "react";
 
+import { Person } from "./person";
+
 // Include a dropdown list as well to choose, maybe
 // you don't know any characters?
 
 export const People = () => {
-  const [query, setQuery] = useState();
+  const [query, setQuery] = useState("");
   const [people, setPeople] = useState([]);
   const [person, setPerson] = useState();
+  const [visible, setVisible] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const personSearch = people.find(
       (person) => person.name.toLowerCase() === query
     );
-    console.log(personSearch);
-    if (!personSearch) {
-      alert("Person not found");
-    }
-
+    //console.log(personSearch);
+    setPerson(personSearch);
     setQuery("");
+    setVisible(true);
   };
 
   useEffect(() => {
@@ -26,6 +27,24 @@ export const People = () => {
       .then((response) => response.json())
       .then((data) => setPeople(data));
   }, []);
+
+  // Something of a microcomponent that makes sure there's something to actually show
+  const display = () => {
+    return visible ? (
+      !person ? (
+        <p>Not found</p>
+      ) : (
+        <Person
+          name={person.name}
+          gender={person.gender}
+          age={person.age}
+          eyeColor={person.eye_color}
+          hairColor={person.hair_color}
+          key={person.id}
+        />
+      )
+    ) : null;
+  };
 
   return (
     <div className="people">
@@ -39,7 +58,7 @@ export const People = () => {
         />
         <button type="submit">Search!</button>
       </form>
-      <div className="person"></div>
+      {display()}
     </div>
   );
 };
