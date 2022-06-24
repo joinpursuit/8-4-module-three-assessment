@@ -1,17 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 
 function Movies() {
+
+  
+
+
+
+
   return (
     <>
-      <header className='movies'>
-      <h1>Select a Movie</h1>
-      <select>
+      <header className="movies">
+        <h1>Select a Movie</h1>
+        <select>
           <option></option>
-      </select>
-
+        </select>
       </header>
     </>
-  )
+  );
 }
 
-export default Movies
+export default Movies;
