@@ -6,6 +6,7 @@ import { Movie } from "./movie";
 export const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [singleMovie, setMovie] = useState([]);
+  const [visible, setVisible] = useState(false);
 
   const handleSelection = (e) => {
     //set selection to value of form
@@ -13,11 +14,13 @@ export const Movies = () => {
 
     //compare value to movies state to pull out relevant array
     const movieFound = movies.find((movie) => movie.title === selection);
-    console.log(movieFound);
 
+    //set needed states
     setMovie(movieFound);
+    setVisible(true);
   };
 
+  //fetch on component load
   useEffect(() => {
     fetch("https://ghibliapi.herokuapp.com/films")
       .then((response) => response.json())
@@ -39,14 +42,18 @@ export const Movies = () => {
           })}
         </select>
       </form>
-      <Movie
-        movie={singleMovie.title}
-        ogTitle={singleMovie.original_title}
-        director={singleMovie.director}
-        releaseDate={singleMovie.release_date}
-        runningTime={singleMovie.running_time}
-        description={singleMovie.description}
-      />
+      <div>
+        {visible ? (
+          <Movie
+            movie={singleMovie.title}
+            ogTitle={singleMovie.original_title}
+            director={singleMovie.director}
+            releaseDate={singleMovie.release_date}
+            runningTime={singleMovie.running_time}
+            description={singleMovie.description}
+          />
+        ) : null}
+      </div>
     </>
   );
 };
