@@ -2,7 +2,15 @@ import React from 'react'
 
 function Movies() {
   return (
-    <div>Movies</div>
+    <>
+      <header className='movies'>
+      <h1>Select a Movie</h1>
+      <select>
+          <option></option>
+      </select>
+
+      </header>
+    </>
   )
 }
 

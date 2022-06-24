@@ -1,4 +1,5 @@
 import "./App.css";
+import Home from "./Components/Home";
 import NavBar from "./Components/NavBar";
 import Movies from "./Components/Movies";
 import People from "./Components/People";
@@ -43,4 +44,3 @@ function App() {
 
 export default App;
 
-{/* <img src={logo} className="App-logo" alt="logo" /> */}
