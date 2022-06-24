@@ -32,6 +32,12 @@ a {
 
 .navbar {
 	background: rgb(14, 102, 137);
-	padding: 50px;
+	padding: 35px;
 	margin: 0 auto;
+}
+
+.movies {
+	margin: 0 auto;
+	width: 40%;
+	height: 100%;
 }

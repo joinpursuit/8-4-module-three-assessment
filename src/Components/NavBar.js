@@ -1,15 +1,19 @@
 /** @format */
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import studioGhibliLogo from '../images/studio-ghibli-logo3.jpeg';
 
 const NavBar = () => {
+	const [color, changeColor] = useState('azure');
+
+	document.body.style.backgroundColor = color;
+
 	return (
 		<nav className='navbar'>
 			<ul className='nav-center'>
 				<li>
-					<Link to='/'>
+					<Link to='/' onClick={() => changeColor('azure')}>
 						<img
 							src={studioGhibliLogo}
 							alt='studio ghibli logo'
@@ -19,16 +23,24 @@ const NavBar = () => {
 					</Link>
 				</li>
 				<li>
-					<Link to='/'>Home</Link>
+					<Link to='/' onClick={() => changeColor('azure')}>
+						Home
+					</Link>
 				</li>
 				<li>
-					<Link to='/movies'>Movies</Link>
+					<Link to='/movies' onClick={() => changeColor('lightblue')}>
+						Movies
+					</Link>
 				</li>
 				<li>
-					<Link to='/people'>People</Link>
+					<Link to='/people' onClick={() => changeColor('lightyellow')}>
+						People
+					</Link>
 				</li>
 				<li>
-					<Link to='/locations'>Locations</Link>
+					<Link to='/locations' onClick={() => changeColor('violet')}>
+						Locations
+					</Link>
 				</li>
 			</ul>
 		</nav>
