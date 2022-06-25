@@ -43,15 +43,17 @@ export const Movies = () => {
         </select>
       </form>
       <div>
-        {visible ? (
-          <Movie
-            movie={singleMovie.title}
-            ogTitle={singleMovie.original_title}
-            director={singleMovie.director}
-            releaseDate={singleMovie.release_date}
-            runningTime={singleMovie.running_time}
-            description={singleMovie.description}
-          />
+        {singleMovie ? (
+          visible ? (
+            <Movie
+              movie={singleMovie.title}
+              ogTitle={singleMovie.original_title}
+              director={singleMovie.director}
+              releaseDate={singleMovie.release_date}
+              runningTime={singleMovie.running_time}
+              description={singleMovie.description}
+            />
+          ) : null
         ) : null}
       </div>
     </>

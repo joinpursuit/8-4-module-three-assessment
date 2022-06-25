@@ -16,9 +16,8 @@ export const People = () => {
     const personSearch = people.find(
       (person) => person.name.toLowerCase() === query
     );
-    //console.log(personSearch);
-    setPerson(personSearch);
     setQuery("");
+    setPerson(personSearch);
     setVisible(true);
   };
 
@@ -28,7 +27,8 @@ export const People = () => {
       .then((data) => setPeople(data));
   }, []);
 
-  // Something of a microcomponent that makes sure there's something to actually show
+  // Something of a microcomponent that makes sure there's something to 
+  // actually show
   const display = () => {
     return visible ? (
       !person ? (
@@ -45,6 +45,8 @@ export const People = () => {
       )
     ) : null;
   };
+  // You know what's a bad idea? Nesting ternaries. Can get out of hand fast.
+  // Don't go deeper than this like, ever.
 
   return (
     <div className="people">

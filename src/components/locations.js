@@ -1,9 +1,9 @@
 /*
- All content should be inside of some element with the class .locations.
+ CHECK All content should be inside of some element with the class .locations.
 
- Has the text "List of Locations" on the page.
+ CHECK Has the text "List of Locations" on the page.
 
- When arriving on the page, has a button with the text "Show Locations".
+ CHECK When arriving on the page, has a button with the text "Show Locations".
 
  When the "Show Locations" button is clicked, the text should be changed to "Hide Locations".
 
@@ -21,10 +21,41 @@ Within each location list item should be another unordered list. The list items 
 
 */
 
-import React from 'react'
+import { React, useEffect, useState } from "react";
 
-export const locations = () => {
+import LocationCard from "./locationCard";
+
+export const Locations = () => {
+  const [locations, setLocations] = useState([]);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    fetch("https://ghibliapi.herokuapp.com/locations")
+      .then((response) => response.json())
+      .then((data) => setLocations(data));
+  }, []);
+
   return (
-    <div>locations</div>
-  )
-}
+    <div className="locations">
+      <h1>List of Locations</h1>
+      <button>Show Locations</button>
+      <div className="container">
+        <ul>
+          {locations.map((location) => {
+            return (
+              <li>
+                <LocationCard
+                  name={location.name}
+                  climate={location.climate}
+                  terrain={location.terrain}
+                  key={location.id}
+                />
+                <br></br>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </div>
+  );
+};
