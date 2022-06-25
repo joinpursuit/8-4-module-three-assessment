@@ -22,6 +22,7 @@ CHECK Within each location list item should be another unordered list. The list 
 */
 
 import { React, useEffect, useState } from "react";
+import Button from "react-bootstrap/Button";
 
 import LocationCard from "./locationCard";
 
@@ -42,7 +43,7 @@ export const Locations = () => {
   return (
     <div className="locations">
       <h1>List of Locations</h1>
-      <button onClick={handleClick}>{visible ? "Hide Locations"  : "Show Locations"}</button>
+      <Button onClick={handleClick}>{visible ? "Hide Locations" : "Show Locations"}</Button>
       {visible ? (
         <div className="locations">
           <ul>
