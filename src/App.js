@@ -10,27 +10,19 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
   const [movies, setMovies] = useState([]);
 
-  const [people, setPeople] = useState([]);
-  const [locations, setLocations] = useState([]);
+  useEffect(() => {
 
-  // const getMovies = () => {
-  //   fetch("")
-  //     .then((data) => data.json())
-  //     .then((json) => {
-  //       setMovies(json);
-  //     });
-  // };
+    fetch(
+  `https://ghibliapi.herokuapp.com/films`
+    )
+      .then((response) => response.json())
+      .then((data) => setMovies(data))
 
-  // useEffect(() => {
-  //     getMovies()
-  // }, )
+  })
 
-  fetch(``)
-    .then((data) => data.json())
-    .then((json) => {
-      setMovies();
-    });
+  
 
+  
   return (
     <Router>
       <div className="App">

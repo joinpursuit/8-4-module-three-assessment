@@ -6,10 +6,9 @@ function NavBar() {
     <>
         <header className='navbar'>
         <nav>
+            <Link to="/">
             <img src="../Ghibli.png" alt='Ghilbi App' width={50} height={50}/>
-            <h2>
-                <Link to="/">Home</Link>
-            </h2>
+            </Link>
             <h2>
                 <Link to="/movies">Movies</Link>
             </h2>
