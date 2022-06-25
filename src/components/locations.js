@@ -21,6 +21,12 @@ CHECK Within each location list item should be another unordered list. The list 
 
 */
 
+// Sorting thoughts - a main function that handles how the data is passed into
+// the locationCard component. Default is as the API provides, 'Sort by Climate' and
+// 'Sort by Terrain' will... no, all that should need to be done is sorting everything
+// in the state. So if these buttons are clicked, that's all that needs to be done.
+// 2 seperate functions to handle each of those cases?
+
 import { React, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import "./locations.css";
@@ -34,6 +40,51 @@ export const Locations = () => {
   const handleClick = (e) => {
     !visible ? setVisible(true) : setVisible(false);
   };
+
+  const handleTerrain = () => {
+    //sorting by terrain
+    setLocations(locations.sort((a, b) => {
+      let terrainA = a.terrain.toLowerCase();
+      let terrainB = b.terrain.toLowerCase();
+      if (terrainA < terrainB) {
+        return -1;
+      }
+      if (terrainA > terrainB) {
+        return 1;
+      }
+      return 0;
+    }));
+  };
+
+  const handleClimate = () => {
+    //sorting by climate
+    locations.sort((a, b) => {
+      let climateA = a.climate.toLowerCase();
+      let climateB = b.climate.toLowerCase();
+      if (climateA < climateB) {
+        return -1;
+      }
+      if (climateA > climateB) {
+        return 1;
+      }
+      return 0;
+    });
+  };
+
+  const handleName = () => [
+    //sorting by name
+    locations.sort((a, b) => {
+      let nameA = a.name.toLowerCase();
+      let nameB = b.name.toLowerCase();
+      if (nameA < nameB) {
+        return -1;
+      }
+      if (nameA > nameB) {
+        return 1;
+      }
+      return 0;
+    })
+  ];
 
   useEffect(() => {
     fetch("https://ghibliapi.herokuapp.com/locations")
@@ -49,8 +100,9 @@ export const Locations = () => {
       </Button>
       {visible ? (
         <>
-          <Button>Sort by Name</Button>
-          <Button>Sort by Climate</Button>
+          <Button onClick={handleTerrain}>Sort by Terrain</Button>
+          <Button onClick={handleClimate}>Sort by Climate</Button>
+          <Button onClick={handleName}>Sort by Name</Button>
         </>
       ) : null}
 
