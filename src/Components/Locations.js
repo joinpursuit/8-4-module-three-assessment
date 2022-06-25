@@ -1,8 +1,9 @@
 import React from 'react'
+import "./Locations"
 
 function Locations() {
   return (
-    <>
+    <div className='center'>
         <header className='locations'>
             <h1>List of locations</h1>
             <button type='submit'>Show Locations</button>
@@ -13,7 +14,7 @@ function Locations() {
 
 
         </header>
-    </>
+    </div>
   )
 }
 

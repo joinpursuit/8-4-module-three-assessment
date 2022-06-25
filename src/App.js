@@ -10,6 +10,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 function App() {
   const [movies, setMovies] = useState([]);
 
+
+  // console.log data returns Array of 22 objects of movies
   useEffect(() => {
 
     fetch(

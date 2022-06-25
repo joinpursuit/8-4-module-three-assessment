@@ -1,9 +1,10 @@
 import React from 'react'
+import "./Home.css"
 
 function Home() {
   return (
     <>
-        <h1>Ghilbi App</h1>
+        <h1>Welcome to GhilbiApp</h1>
     </>
   )
 }
