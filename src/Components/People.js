@@ -1,18 +1,41 @@
-import React from 'react'
-import './People.css'
+import React, { useEffect, useState } from "react";
+import "./People.css";
+import PeopleCard from "./PeopleCard";
 
 function People() {
+
+  const [people, setPeople] = useState([]);
+  const [input, setInput] = useState("");
+  // console.log(people);
+
+  useEffect(() => {
+    fetch("https://ghibliapi.herokuapp.com/people")
+      .then((response) => response.json())
+      .then((data) => setPeople(data))
+      .catch((error) => console.log(error));
+  }, []);
+
+  const foundPerson = people.find(person => person.name === input)
+  // const formatedInput = input.toLowerCase()
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setInput(e.target.value)
+  }
+
+  console.log(foundPerson)
   return (
-    <>
-        <header className='people'>
-            <h1>Search for a person</h1>
-            <form className='submit'>
-                <input type="text"/>
-                <button type='submit'>SUBMIT</button>
-            </form>
-        </header>
-    </>
-  )
+    <div>
+      <h1>Search for a Person</h1>
+      <form onSubmit={handleSubmit}>
+        <input onChange={(e) => setInput(e.target.value)} type="text" ></input> 
+        
+        <button>Submit</button>
+      </form>
+      <PeopleCard foundPerson={foundPerson}/>
+    </div>
+  );
 }
 
-export default People
+export default People;
+
