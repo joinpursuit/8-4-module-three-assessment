@@ -1,0 +1,12 @@
+ul {
+    list-style-type: none;
+}
+
+.locations {
+}
+
+.location-card {
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+}
