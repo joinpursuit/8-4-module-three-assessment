@@ -27,7 +27,7 @@ export const People = () => {
       .then((data) => setPeople(data));
   }, []);
 
-  // Something of a microcomponent that makes sure there's something to 
+  // Something of a microcomponent that makes sure there's something to
   // actually show
   const display = () => {
     return visible ? (
