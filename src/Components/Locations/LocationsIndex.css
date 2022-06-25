@@ -1,0 +1,27 @@
+.hidden {
+  visibility: hidden;
+}
+
+.location-cards {
+  border: solid black;
+  padding: 1rem;
+  margin: 1rem;
+  color: #551A8B;
+  background-color: antiquewhite;
+  opacity: .75;
+}
+
+li {
+  list-style: none;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  margin: 1rem;
+
+  /* To make content 'scroll-able' */
+  height: 90vh;
+  overflow: auto;
+}

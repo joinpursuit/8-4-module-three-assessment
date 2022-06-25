@@ -1,0 +1,27 @@
+#hidden {
+    visibility: hidden;
+}
+
+span {
+    font-weight: bold;
+}
+
+.movie_shown {
+    border: solid black;
+    width:fit-content;
+    margin: 5ch;
+    padding: 5ch;
+    background-color: antiquewhite;
+    opacity: .75;
+    color: #551A8B;
+}
+
+.movies h1 {
+    /* background-color: antiquewhite; */
+    width: auto;
+    opacity: .75;
+    margin-top: 0%;
+    padding-top: 10%;
+    /* color: #551A8B; */
+    color: antiquewhite
+}
