@@ -16,9 +16,11 @@ function People() {
   }, []);
 
   const foundPerson = people.find(person => person.name === input)
+  // const formatedInput = input.toLowerCase()
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // setInput(e.target.value)
+    setInput(e.target.value)
   }
 
   console.log(foundPerson)
@@ -26,7 +28,8 @@ function People() {
     <div>
       <h1>Search for a Person</h1>
       <form onSubmit={handleSubmit}>
-        <input onChange={(e) => setInput(e.target.value)}type="text" ></input>
+        <input onChange={(e) => setInput(e.target.value)} type="text" ></input> 
+        
         <button>Submit</button>
       </form>
       <PersonCard foundPerson={foundPerson}/>
@@ -35,3 +38,6 @@ function People() {
 }
 
 export default People;
+
+//onChange stays the same 
+//handleSubmit has to change. setInput in handlechange has to be set witha  different variable that equals the input with all letters to lowercase
