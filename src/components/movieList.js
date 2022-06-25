@@ -28,7 +28,7 @@ export const Movies = () => {
   }, []);
 
   return (
-    <>
+    <div className="movies">
       <h1>Select a movie</h1>
       <form onChange={handleSelection}>
         <select>
@@ -56,6 +56,6 @@ export const Movies = () => {
           ) : null
         ) : null}
       </div>
-    </>
+    </div>
   );
 };

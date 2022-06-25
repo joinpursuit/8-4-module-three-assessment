@@ -14,7 +14,7 @@ export const People = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const personSearch = people.find(
-      (person) => person.name.toLowerCase() === query
+      (person) => person.name.toLowerCase() === query.toLowerCase()
     );
     setQuery("");
     setPerson(personSearch);
@@ -32,7 +32,7 @@ export const People = () => {
   const display = () => {
     return visible ? (
       !person ? (
-        <p>Not found</p>
+        <p>Not Found</p>
       ) : (
         <Person
           name={person.name}
@@ -50,7 +50,7 @@ export const People = () => {
 
   return (
     <div className="people">
-      <h1>Search for a character</h1>
+      <h1>Search for a Person</h1>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

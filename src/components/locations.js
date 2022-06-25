@@ -42,9 +42,9 @@ export const Locations = () => {
   return (
     <div className="locations">
       <h1>List of Locations</h1>
-      <button onClick={handleClick}>Show Locations</button>
+      <button onClick={handleClick}>{visible ? "Hide Locations"  : "Show Locations"}</button>
       {visible ? (
-        <div className="container">
+        <div className="locations">
           <ul>
             {locations.map((location) => {
               return (
