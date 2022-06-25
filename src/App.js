@@ -1,25 +1,27 @@
-import logo from "./logo.svg";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from "./Components/Home";
+import Locations from "./Components/Locations";
+import Movies from "./Components/Movies";
+import NavBar from "./Components/NavBar";
+import People from "./Components/People";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='ghibli-app'>
+      <Router>
+        <NavBar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='movies' element={<Movies />} />
+          <Route path='people' element={<People />} />
+          <Route path='location' element={<Location />} />
+        </Routes>
+      </Router>
     </div>
-  );
+  )
+ 
 }
 
 export default App;
