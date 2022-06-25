@@ -1,23 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Nav from "react-bootstrap/Nav"
 
-export const nav = () => {
+export const Navbar = () => {
   return (
     <nav>
-      <ul>
-        <li>
-            <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/movies">Movies</Link>
-        </li>
-        <li>
-          <Link to="/people">People</Link>
-        </li>
-        <li>
-          <Link to="/locations">Locations</Link>
-        </li>
-      </ul>
+      <Nav justify variant="tabs" className="Nav" className="justify-content-center" activeKey={"/"}>
+          <Nav.Item>
+            <Nav.Link href="/">Home</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="/locations">Locations</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="/people">People</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link href="/movies">Movies</Nav.Link>
+          </Nav.Item>
+        </Nav>
     </nav>
   );
 };
