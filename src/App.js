@@ -12,7 +12,8 @@ import Locations from "./components/Locations";
 function App() {
 
   const [movie, setMovie] = useState([]);
-  const [name, setName] = useState([]);
+  const [people, setPeople] = useState([]);
+  const [location, setLocation] = useState([]);
 
   return (
     <>
@@ -23,8 +24,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/movies" element={<Movies movie={ movie } setMovie={ setMovie } />} />
-              <Route path="/people" element={<People name={ name } setName={ setName }/>} />
-              <Route path="/locations" element={<Locations />} />
+              <Route path="/people" element={<People people={ people } setPeople={ setPeople }/>} />
+              <Route path="/locations" element={<Locations location={ location } setLocation={ setLocation }/>} />
             </Routes>
           </div>
         </Router>
