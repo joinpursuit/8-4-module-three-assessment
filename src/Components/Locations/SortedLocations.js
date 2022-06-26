@@ -9,8 +9,6 @@ function SortedLocations({ locations, sortedLocations }) {
             return ((x < y) ? -1 : ((x > y) ? 1 : 0));
         });
     }
-
-    // console.log(sorted)
     if (sortedLocations === 'all') {
         return (
             <ul className='card-container'>
@@ -34,9 +32,9 @@ function SortedLocations({ locations, sortedLocations }) {
                 {sorted(sortedLocations).map(el => {
                     return (
                         <ul className='location-cards' id={el.id}>
-                            <li><span>Name: </span>{el.name}</li>
-                            <li><span>Climate: </span>{el.climate}</li>
-                            <li><span>Terrain: </span>{el.terrain}</li>
+                            <li key={Math.floor(Math.random() * 500)}><span>Name: </span>{el.name}</li>
+                            <li key={Math.floor(Math.random() * 500)}><span>Climate: </span>{el.climate}</li>
+                            <li key={Math.floor(Math.random() * 500)}><span>Terrain: </span>{el.terrain}</li>
                         </ul>
                     )
                 })}

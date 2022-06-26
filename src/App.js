@@ -12,7 +12,6 @@ import PeopleIndex from './Components/People/PeopleIndex';
 export default function App() {
   const [people, setPeople] = useState([]);
   const [films, setFilms] = useState([]);
-
   const [locations, setLocations] = useState([]);
 
 
@@ -21,7 +20,6 @@ export default function App() {
       .then((response) => response.json())
       .then((data) => { //
         setPeople(data)
-
       })
   }
 

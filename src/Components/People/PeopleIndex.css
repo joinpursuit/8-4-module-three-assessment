@@ -1,10 +1,7 @@
 #hidden {
     visibility: hidden;
 }
-.people {
-    /* margin-bottom: 1rem; */
-    /* border: solid black */
-}
+
 
 .person-article {
     margin: 1rem;
@@ -14,12 +11,9 @@
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 5%;
-    /* padding: 5%; */
-    /* border: solid black */
 }
 
 .people h1 {
     margin-top: 10%;
     color: antiquewhite; 
-    /* border: solid black ; */
 }

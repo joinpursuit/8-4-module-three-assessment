@@ -1,7 +1,6 @@
-import React from 'react'
+import React from 'react';
 
 export default function ShowPerson({ foundPerson }) {
-    // console.log(foundPerson.length)
     if (foundPerson === undefined ) {
         return null
     }

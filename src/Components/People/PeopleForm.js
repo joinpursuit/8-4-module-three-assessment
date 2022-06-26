@@ -21,7 +21,6 @@ export default function PeopleForm({ people, personValue, setPersonValue, setFou
         }
     }
 
-    // console.log(personValue)
     return (
         <>
             <form className='search-person-form' onSubmit={onSubmit}>
