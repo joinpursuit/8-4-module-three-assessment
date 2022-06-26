@@ -1,0 +1,17 @@
+.navbar {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: #962375;
+    padding: 10px;
+    text-decoration: none;
+  }
+  .navbar div {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+  }
+  a:link, a:visited, a:active {
+    text-decoration:none;
+    color: rgb(245, 238, 243);
+  }
