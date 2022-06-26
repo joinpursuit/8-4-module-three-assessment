@@ -24,7 +24,7 @@ export default function People({ allPeople }) {
   const peopleInfo = () => {
     if (found === undefined) {
       return (
-        <p>
+        <p id="not-Found">
           <strong>Not Found</strong>
         </p>
       );

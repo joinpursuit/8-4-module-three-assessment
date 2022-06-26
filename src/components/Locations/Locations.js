@@ -14,15 +14,15 @@ export default function Locations({ allLocations, setAllLocations }) {
     return allLocations.map((location, index) => {
       return (
         // <div className="locations-div">
-          <ul className="locations-ul" key={index}>
-            <li className="locations-li" key={location.id}>
-              <LocationCard
-                sortedPeople={sortedPeople}
-                location={location}
-                key={location.id}
-              />
-            </li>
-          </ul>
+        <ul className="locations-ul" key={index}>
+          <li className="locations-li" key={location.id}>
+            <LocationCard
+              sortedPeople={sortedPeople}
+              location={location}
+              key={location.id}
+            />
+          </li>
+        </ul>
         // </div>
       );
     });
@@ -83,21 +83,24 @@ export default function Locations({ allLocations, setAllLocations }) {
 
         <div className="sort-option">
           {buttonStatus ? (
-            <button className="followUpButton" onClick={sortByName}>Sort by Name</button>
+            <button className="followUpButton" onClick={sortByName}>
+              Sort by Name
+            </button>
           ) : null}{" "}
           {buttonStatus ? (
-            <button className="followUpButton" onClick={sortByClimate}>Sort by Climate</button>
+            <button className="followUpButton" onClick={sortByClimate}>
+              Sort by Climate
+            </button>
           ) : null}{" "}
           {buttonStatus ? (
-            <button className="followUpButton" onClick={sortByTerrain}>Sort by Terrain</button>
+            <button className="followUpButton" onClick={sortByTerrain}>
+              Sort by Terrain
+            </button>
           ) : null}{" "}
         </div>
       </div>
       {/* nicer styling but fails cypress */}
-      {/* <div className="info"> */} 
-      {buttonStatus ? locationsInfo() : null}
-      {/* </div> */}
-     
+        {buttonStatus ? locationsInfo() : null}
     </div>
   );
 }
