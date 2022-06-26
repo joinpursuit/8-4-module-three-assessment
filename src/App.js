@@ -18,7 +18,6 @@ function App() {
       .then((res) => res.json())
       .then((data) => {
         setAllMovies(data);
-        // console.log(allMovies);
       })
       .catch((err) => {
         console.log(err);
@@ -30,7 +29,6 @@ function App() {
       .then((res) => res.json())
       .then((data) => {
         setAllPeople(data);
-        // console.log(allMovies);
       })
       .catch((err) => {
         console.log(err);
@@ -42,7 +40,6 @@ function App() {
       .then((res) => res.json())
       .then((data) => {
         setAllLocations(data);
-        // console.log(allMovies);
       })
       .catch((err) => {
         console.log(err);

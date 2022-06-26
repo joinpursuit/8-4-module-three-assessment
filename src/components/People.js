@@ -11,21 +11,25 @@ export default function People({ allPeople, setAllPeople }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    //need a condition here --- if found set it - else reset to [];
     setFound(
       allPeople.find(
         (people) =>
-          people.name === userInput[0].toUpperCase() + userInput.slice(1)
+          people.name === `${userInput[0].toUpperCase() + userInput.slice(1)}`
       )
     );
     setUserInput("");
+    // setFound([])
   };
 
   const peopleInfo = () => {
-
-    if (!found && userInput) {
-      return <p><strong>Not Found</strong></p>;
-  
-    } else if (!found) {
+    if (found === undefined) {
+      return (
+        <p>
+          <strong>Not Found</strong>
+        </p>
+      );
+    } else if (Object.keys(found).length >= 1 && found) {
       return (
         <div>
           <p>
@@ -42,8 +46,6 @@ export default function People({ allPeople, setAllPeople }) {
           </p>
         </div>
       );
-      
-     
     }
   };
 
