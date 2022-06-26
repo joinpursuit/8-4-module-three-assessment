@@ -6,7 +6,7 @@ import './PeopleIndex.css'
 export default function PeopleIndex({ people }) {
   const [personValue, setPersonValue] = useState('');
   const [foundPerson, setFoundPerson] = useState([]);
-  console.log(foundPerson)
+  // console.log(foundPerson)
   return (
     <div className="people">
       <br />

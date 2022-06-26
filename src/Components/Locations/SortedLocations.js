@@ -11,34 +11,36 @@ function SortedLocations({ locations, sortedLocations }) {
     }
     if (sortedLocations === 'all') {
         return (
-            <ul className='card-container'>
+            <>
                 {locations.map(location => {
                     return (
-                        <ul className='location-cards' id={location.id}>
-                            <li><span>Name: </span>{location.name}</li>
-                            <li><span>Climate: </span>{location.climate}</li>
-                            <li><span>Terrain: </span>{location.terrain}</li>
-                        </ul>
+                        <li>
+                            <ul className='location-cards' id={location.id}>
+                                <li><span>Name:</span> <span>{location.name}</span></li>
+                                <li><span>Climate:</span> <span>{location.climate}</span></li>
+                                <li><span>Terrain:</span> <span>{location.terrain}</span></li>
+                            </ul>
+                        </li>
                     )
                 })}
-
-
-            </ul>
+            </>
         )
     }
     else {
         return (
-            <ul className='card-container'>
+            <>
                 {sorted(sortedLocations).map(el => {
                     return (
-                        <ul className='location-cards' id={el.id}>
-                            <li key={Math.floor(Math.random() * 500)}><span>Name: </span>{el.name}</li>
-                            <li key={Math.floor(Math.random() * 500)}><span>Climate: </span>{el.climate}</li>
-                            <li key={Math.floor(Math.random() * 500)}><span>Terrain: </span>{el.terrain}</li>
-                        </ul>
+                        <li >
+                            <ul className='location-cards' id={el.id}>
+                                <li><span>Name:</span> <span>{el.name}</span></li>
+                                <li><span>Climate:</span> <span>{el.climate}</span></li>
+                                <li><span>Terrain:</span> <span>{el.terrain}</span></li>
+                            </ul>
+                        </li>
                     )
                 })}
-            </ul>
+            </>
 
         )
     }

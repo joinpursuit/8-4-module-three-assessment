@@ -23,15 +23,15 @@ function LocationsIndex({ locations }) {
       {!displayButton && <button onClick={startEditingHandler}>Show Locations</button>}
       {displayButton &&
         <div className='opened_Buttons'>
-          <button onClick={stopEditingHandler}>Hide Locations</button>
+          <button onClick={stopEditingHandler} >Hide Locations</button>
           <button onClick={getSortedLocations} value='name'>Sort by Name</button>
           <button onClick={getSortedLocations} value='climate'>Sort by Climate</button>
           <button onClick={getSortedLocations} value='terrain'>Sort by Terrain</button>
         </div>
       }
-      <div className={displayButton ? 'show' : 'hidden'} >
+      <ul className={displayButton ? 'show' : 'hidden'} id='card-container'>
         <SortedLocations locations={locations} sortedLocations={sortedLocations}/>
-      </div>
+      </ul>
     </div>
   )
 }

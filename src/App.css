@@ -90,12 +90,14 @@ button {
     margin-right: 15px;
     grid-column: 1 / -1;
   }
-  .card-container {
+
+  .locations #card-container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    margin-right: 30px;
+    width: 100%;
   }
+
   .location-cards {
     grid-column: 1 / -1;
   }
