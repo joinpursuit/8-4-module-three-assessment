@@ -20,9 +20,19 @@ li {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  margin-right: 30px;
-
+  align-items: center;
+  width: 100%;
   /* To make content 'scroll-able' */
   height: 90vh;
   overflow: auto;
+}
+
+.opened_Buttons {
+  text-align: center;
+  padding-right: 30ch;
+  margin-right: -30ch;
+}
+
+ul {
+  padding: 0;
 }

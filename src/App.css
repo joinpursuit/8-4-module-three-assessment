@@ -2,6 +2,12 @@
 
 .App {
   font-family: "Montserrat Medium";
+  /* Meant to fix the white sides on phone screen. Blog used below:
+    https://stackoverflow.com/questions/12639273/white-space-to-the-right-of-website-on-mobile-devices */
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .background-added {
@@ -18,7 +24,6 @@ main {
 }
 
 button {
-  /* border-radius: 0.5ch; */
   margin-left: 1ch;
   margin-top: 2ch;
 
@@ -30,16 +35,7 @@ button {
   font-size: medium;
 }
 
-@media screen and (max-width: 600px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-  .App {
-    /* Meant to fix the white sides on phone screen. Blog used below:
-    https://stackoverflow.com/questions/12639273/white-space-to-the-right-of-website-on-mobile-devices */
-    overflow-x:hidden;
-    width:100%;
-    margin: 0;
-    padding: 0;
-  }
-
+@media screen and (max-width: 620px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
   .background-added {
     background-image: url("./logo/ghibli-phone.gif");
     background-size: cover;
@@ -91,11 +87,11 @@ button {
   }
 
   /* Location Component */
-  .opened_Buttons{
+  .opened_Buttons {
     margin-right: 15px;
     grid-column: 1 / -1;
   }
-  .card-container{
+  .card-container {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
