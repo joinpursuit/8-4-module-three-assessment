@@ -8,6 +8,7 @@ import NavBar from './Components/NavBar';
 import Movies from './Components/Movies';
 import Locations from './Components/Locations';
 import People from './Components/People';
+import ghibliFilms from './api/ghibli';
 
 function App() {
 	return (
@@ -16,7 +17,10 @@ function App() {
 				<NavBar />
 				<Routes>
 					<Route path='/' element={<Home />} />
-					<Route path='/movies' element={<Movies />} />
+					<Route
+						path='/movies'
+						element={<Movies ghibliFilms={ghibliFilms} />}
+					/>
 					<Route path='/people' element={<People />} />
 					<Route path='/locations' element={<Locations />} />
 				</Routes>
