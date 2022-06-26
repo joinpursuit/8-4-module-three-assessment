@@ -1,6 +1,104 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
+.App {
+  font-family: "Montserrat Medium";
+  /* Meant to fix the white sides on phone screen. Blog used below:
+    https://stackoverflow.com/questions/12639273/white-space-to-the-right-of-website-on-mobile-devices */
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-.app {
+.background-added {
+  background-image: url("./logo/SpritedAway.gif");
+  background-size: cover;
+  height: 100vh;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+
+main {
   text-align: center;
 }
 
+button {
+  margin-left: 1ch;
+  margin-top: 2ch;
+
+  /* Button style from: https://wpforms.com/how-to-customize-button-styles-with-css-with-examples/ */
+  color: antiquewhite; /* Text color */
+  background-color: transparent; /* Remove background color */
+  border: 2px solid black; /* Border thickness, line style, and color */
+  border-radius: 5px; /* Adds curve to border corners */
+  font-size: medium;
+}
+
+@media screen and (max-width: 620px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .background-added {
+    background-image: url("./logo/ghibli-phone.gif");
+    background-size: cover;
+    width: auto;
+    height: 150vh;
+  }
+
+  /* NavBar Components */
+  nav {
+    align-items: center;
+    display: grid;
+    margin: auto;
+    width: 100%;
+    grid-template-rows: repeat(4, 0.5fr);
+    grid-template-areas:
+      "logo"
+      "movies"
+      "people"
+      "locations";
+  }
+
+  nav .App-logo {
+    grid-area: logo;
+    grid-column: 1 / -1;
+    border: solid black;
+    text-align: center;
+    margin-right: 1ch;
+  }
+  nav .Movies {
+    grid-area: movies;
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: -2ch;
+  }
+
+  nav .People {
+    grid-area: people;
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: -2ch;
+  }
+
+  nav .Locations {
+    grid-area: locations;
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: -2ch;
+  }
+
+  /* Location Component */
+  .opened_Buttons {
+    margin-right: 15px;
+    grid-column: 1 / -1;
+  }
+
+  .locations #card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+  }
+
+  .location-cards {
+    grid-column: 1 / -1;
+  }
+}

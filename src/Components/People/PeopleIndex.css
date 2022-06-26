@@ -1,0 +1,19 @@
+#hidden {
+    visibility: hidden;
+}
+
+
+.person-article {
+    margin: 1rem;
+    background-color: antiquewhite;
+    opacity: .75;
+    color: #551A8B;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 10%;
+}
+
+.people h1 {
+    margin-top: 10%;
+    color: antiquewhite; 
+}
