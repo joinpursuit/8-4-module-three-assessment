@@ -1,6 +1,44 @@
+.nav img{
+  width: 100px;
+  float: left;
+}
 
+.nav{
+  margin: 5px;
+  padding: 5px;
+  background-color: rgba(180,221,250, .8);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 30px;
+}
 
-.app {
-  text-align: center;
+.nav a{
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: x-large;
+  cursor: pointer;
+}
+
+.nav a:hover{
+  color: white;
+}
+
+button{
+  background-color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: white;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+button:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.17);
 }
 

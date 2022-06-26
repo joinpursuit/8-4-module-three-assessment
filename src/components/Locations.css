@@ -1,0 +1,22 @@
+.locations {
+  text-align: center;
+  background-color: rgba(180, 221, 250, 0.7);
+  margin: 25px 100px;
+  padding: 5px;
+  border-radius: 30px;
+  box-shadow: 5px 10px;
+  display: grid;
+  grid-template-areas:
+    "h h h"
+    "b b b"
+    "l l l";
+}
+
+.locations h1 {
+  grid-area: h;
+}
+
+.buttons{
+  grid-area: b;
+  margin-bottom: 5px;
+}

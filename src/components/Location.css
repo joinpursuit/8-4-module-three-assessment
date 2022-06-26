@@ -1,0 +1,21 @@
+.location{
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 30px;
+    padding: 5px;
+    margin: 5px;
+    margin-right: 45px;
+  }
+  
+  li{
+    list-style: none;
+    padding: 5px;
+  }
+  
+  .span-one{
+    font-weight: bold;
+  }
+  
+  .locations button{
+    margin: 0px 45px;
+  }
