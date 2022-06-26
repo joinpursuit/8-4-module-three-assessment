@@ -31,6 +31,15 @@ button {
 }
 
 @media screen and (max-width: 600px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  .App {
+    /* Meant to fix the white sides on phone screen. Blog used below:
+    https://stackoverflow.com/questions/12639273/white-space-to-the-right-of-website-on-mobile-devices */
+    overflow-x:hidden;
+    width:100%;
+    margin: 0;
+    padding: 0;
+  }
+
   .background-added {
     background-image: url("./logo/ghibli-phone.gif");
     background-size: cover;
@@ -38,10 +47,12 @@ button {
     height: 150vh;
   }
 
+  /* NavBar Components */
   nav {
     align-items: center;
     display: grid;
     margin: auto;
+    width: 100%;
     grid-template-rows: repeat(4, 0.5fr);
     grid-template-areas:
       "logo"
@@ -55,6 +66,7 @@ button {
     grid-column: 1 / -1;
     border: solid black;
     text-align: center;
+    margin-right: 1ch;
   }
   nav .Movies {
     grid-area: movies;
@@ -76,5 +88,20 @@ button {
     text-align: center;
     margin: -2ch;
     font-style: black;
+  }
+
+  /* Location Component */
+  .opened_Buttons{
+    margin-right: 15px;
+    grid-column: 1 / -1;
+  }
+  .card-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin-right: 30px;
+  }
+  .location-cards {
+    grid-column: 1 / -1;
   }
 }

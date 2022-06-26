@@ -3,6 +3,7 @@
 }
 
 .location-cards {
+  align-items: center;
   border: solid black;
   padding: 1rem;
   margin: 1rem;
@@ -19,7 +20,7 @@ li {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  margin: 1rem;
+  margin-right: 30px;
 
   /* To make content 'scroll-able' */
   height: 90vh;

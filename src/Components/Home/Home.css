@@ -46,3 +46,12 @@
     filter: blur(0);
   }
 }
+
+
+@media screen and (max-width: 600px){
+  .home-display h1 {
+    max-width: 20ch;
+    text-align: center;
+    font-size: 300%;
+  }
+}
