@@ -2,8 +2,10 @@ import React from 'react'
 
 const People  = () => {
   return (
-    <div>People </div>
-  )
-}
+    <div className='people'>
+      <h2>Search for a Person</h2>
+    </div>
+  );
+};
 
 export default People 

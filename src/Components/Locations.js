@@ -2,7 +2,10 @@ import React from 'react'
 
 const Locations = () => {
   return (
-    <div>Locations</div>
+    <div className='locations'>
+      <h2>List of Locations</h2>
+      <button type='submit'>Show Locations</button>
+    </div>
   )
 }
 

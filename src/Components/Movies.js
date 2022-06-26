@@ -2,8 +2,10 @@ import React from 'react'
 
 const Movies = () => {
   return (
-    <div>Movies</div>
-  )
-}
+    <div className='movies'>
+        <h2>Select a Movie</h2>
+    </div>
+  );
+};
 
 export default Movies

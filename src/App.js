@@ -14,9 +14,9 @@ function App() {
         <NavBar />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='movies' element={<Movies />} />
-          <Route path='people' element={<People />} />
-          <Route path='location' element={<Location />} />
+          <Route path='/movies' element={<Movies />} />
+          <Route path='/people' element={<People />} />
+          <Route path='/locations' element={<Locations />} />
         </Routes>
       </Router>
     </div>
