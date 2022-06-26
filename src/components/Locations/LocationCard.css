@@ -1,0 +1,18 @@
+.location-card-div {
+  display: grid;
+  color: black;
+  background-color: white;
+}
+
+.location-card-ul {
+  display: grid;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 0;
+  background-color: #00a9fc;
+}
+
+.location-card-li {
+  display: grid;
+  font-size: 20px;
+}
