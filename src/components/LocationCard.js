@@ -8,7 +8,7 @@ export default function LocationCard({ location }) {
   return (
     <div className="location-card-div">
       <ul className="location-card-ul" >
-        <li className="location-card-li" id={location.id} key={location.id}>
+        <li className="location-card-li"  key={location.id}>
           <p>
             <strong>Name:</strong>
             {name}
