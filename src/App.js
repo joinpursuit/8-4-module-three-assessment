@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 //import "./App.css";
 
 import React from "react";
@@ -8,7 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/nav";
 import { home as Home } from "./components/home";
 import { Movies } from "./components/movieList";
-import { People as People } from "./components/people";
+import { People } from "./components/people";
 import { Locations } from "./components/locations";
 
 function App() {

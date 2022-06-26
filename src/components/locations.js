@@ -120,7 +120,7 @@ export const Locations = () => {
               {locations.map((location) => {
                 return (
                   <Col>
-                    <li className="location-card">
+                    <li className="location-card" key={location.id}>
                       <LocationCard
                         name={location.name}
                         climate={location.climate}
