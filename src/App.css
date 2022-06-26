@@ -6,92 +6,39 @@
 .nav{
   margin: 5px;
   padding: 5px;
-  background-color: #89CFF0;
+  background-color: rgba(180,221,250, .8);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-}
-
-.home{
-  text-align: center;
+  border-radius: 30px;
 }
 
 .nav a{
   color: black;
   text-decoration: none;
+  font-weight: bold;
+  font-size: x-large;
+  cursor: pointer;
 }
 
 .nav a:hover{
   color: white;
 }
 
-.movies{
-  text-align: center;
+button{
+  background-color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
 }
 
-.movie span{
-  font-weight: bold;
+button:active {
+  background-color: white;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
-.people{
-  text-align: center;
+button:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.17);
 }
-
-.people button{
-  margin: 0px 5px;
-}
-
-.person span{
-  font-weight: bold;
-}
-
-.locations{
-  text-align: center;
-  display: grid;
-  grid-template-areas:
-  "h h h h"
-  "s n c t"
-  "l l l l";
-}
-
-.locations h1{
-  grid-area: h;
-}
-
-.show{
-  grid-area: s;
-}
-
-.name{
-  grid-area: n;
-}
-
-.climate{
-  grid-area: c;
-}
-
-.terrain{
-  grid-area: t;
-}
-
-.location{
-  border: 1px solid black;
-  padding: 5px;
-  margin: 5px;
-  margin-right: 45px;
-}
-
-.location span{
-  font-weight: bold;
-}
-
-li{
-  list-style: none;
-  padding: 5px;
-}
-
-.locations button{
-  margin: 0px 5px;
-}
-
 

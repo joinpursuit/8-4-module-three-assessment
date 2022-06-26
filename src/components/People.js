@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import Person from "./Person";
+import "./People.css"
 
 const People = () => {
   const [userRequest, setUserRequest] = useState("");
   const [people, setPeople] = useState([]);
   const [person, setPerson] = useState();
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     fetch("https://ghibliapi.herokuapp.com/people")
@@ -15,10 +17,14 @@ const People = () => {
   const handleSubmit = (e) =>{
     e.preventDefault();
 
-    const foundPerson = people.find(person => person.name.toLowerCase() === userRequest.toLowerCase())
+    const foundPerson = people.find(person => person.name.toLowerCase() === userRequest.toLowerCase());
 
-    setPerson(foundPerson)
-    setUserRequest("")
+    if(!foundPerson){
+      setError(true)
+    };
+
+    setPerson(foundPerson);
+    setUserRequest("");
   }
 
   return (
@@ -33,6 +39,7 @@ const People = () => {
         <button type="submit">Submit</button>
       </form>
       {person ? <Person person={person} /> : null}
+      {error ? "Not Found" : null}
     </div>
   );
 };

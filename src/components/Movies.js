@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import Movie from "./Movie";
+import "./Movies.css"
 
 const Movies = () => {
     const [movies, setMovies] = useState([]);
-    const [selection, setSelection] = useState('');
     const [selectedMovie, setSelectedMovie] = useState();
 
     useEffect(() => {
@@ -14,7 +14,6 @@ const Movies = () => {
 
     const handleSelection = (e) =>{
         const value = e.target.value;
-        setSelection(value);
         setSelectedMovie(movies.find(movie => movie.id === value));
     }
 

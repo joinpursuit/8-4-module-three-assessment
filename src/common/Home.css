@@ -1,0 +1,12 @@
+.home{
+    text-align: center;
+    margin: 25px;
+  }
+
+.header{
+    background-color: rgba(180,221,250,.7);
+    margin: 0 300px;
+    border-radius: 30px;
+    padding: 5px;
+    box-shadow: 5px 10px;
+}

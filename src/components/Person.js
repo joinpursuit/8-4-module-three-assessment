@@ -1,3 +1,5 @@
+import "./Person.css"
+
 const Person = ({person}) => {
     return (
         <div className="person">

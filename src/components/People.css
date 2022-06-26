@@ -1,0 +1,16 @@
+.people{
+  text-align: center;
+  background-color: rgba(180,221,250,.7);
+  margin: 25px 200px;
+  padding: 5px;
+  border-radius: 30px;
+  box-shadow: 5px 10px;
+  }
+  
+  .people button{
+    margin: 0px 5px;
+  }
+
+  .people form{
+    margin-bottom: 15px;
+  }
