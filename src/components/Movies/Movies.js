@@ -1,5 +1,6 @@
 import React,{ useState, useEffect } from 'react';
 import MoviesPage from './MoviesPage';
+import "./Movies.css"
 
 const Movies = () => {
   const [films, setFilms] = useState([]);
@@ -21,7 +22,7 @@ const Movies = () => {
   return (
     <div className="movies">
         <h1>Select a Movie</h1>
-        <select onChange={handleSelect}>
+        <select className="opt" onChange={handleSelect}>
           <option></option>
           {films.map((film) => (
             <option value={film.id} key={film.id}>{film.title}</option>

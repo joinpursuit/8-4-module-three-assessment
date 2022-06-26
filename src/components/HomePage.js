@@ -2,7 +2,7 @@ import React from 'react'
 
 const HomePage = () => {
   return (
-    <div>
+    <div className='home'>
         <h1>Welcome to GhibliApp</h1>
     </div>
   )

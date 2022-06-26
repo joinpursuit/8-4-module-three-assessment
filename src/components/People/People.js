@@ -1,21 +1,25 @@
 import React, { useEffect, useState } from 'react';
-
+import PeoplePage from './PeoplePage';
 
 const People = () => {
   const [people, setPeople] = useState([]);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     fetch(`https://ghibliapi.herokuapp.com/people`)
     .then((response) => response.json())
     .then((data) => setPeople(data))
     .catch((error) => console.log(error))
-  },[])
+  },[people, search])
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setPeople(event.target.value)
+    setSearch(event.target.value)
   }
-
+// console.log(people);
+// const searchedPerson = people.find((person) => {
+//   return person.name === search;
+// })
 
 
 
@@ -23,9 +27,10 @@ const People = () => {
     <div className="people">
         <h1> Search for a Person </h1>
         <form onSubmit={handleSubmit}>
-          <input type="text"   placeholder="Search a Person"/>
+          <input type="text"   onChange={(event) => setSearch(event.target.value)} value={search} placeholder="Search a Person"/>
           <button type="submit">SUBMIT</button>
         </form>
+        <PeoplePage people={people} search={search}/>
 
     </div>
   )

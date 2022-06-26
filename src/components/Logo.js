@@ -1,9 +1,10 @@
 import React from 'react';
-import Hestia3 from "./Hestia3.jpg";
+// import Hestia3 from "./Hestia3.jpg";
+import united from "./united.jpeg";
 import { Link } from "react-router-dom";
 
 const Logo = () => {
-  const imgUrl = Hestia3;
+  const imgUrl = united;
   return (
     <div>
       <Link to="/">

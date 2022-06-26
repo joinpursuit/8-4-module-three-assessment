@@ -4,3 +4,21 @@
   text-align: center;
 }
 
+.navbar {
+  background-color: orangered;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+.link {
+  text-decoration: none;
+  color: black;
+  font-weight: 900;
+}
+
+.home {
+  text-align: center;
+}

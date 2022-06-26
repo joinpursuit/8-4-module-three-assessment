@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <Navigation/>
-    <div className="App">
+    <div className="grid">
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/movies" element={<Movies/>} />

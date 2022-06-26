@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Movies.css"
 
 const MoviesPage = ({ films, change }) => {
 
@@ -7,16 +8,16 @@ const MoviesPage = ({ films, change }) => {
     
   if (!change) {
    return (
-    <div>
+    <div className='no-show'>
       <p>Please Select a movie</p>
     </div>
     )
   }
   
 return (
-  <div>
+  <div className='movies-display'>
     <h1> <strong>Title:</strong> {selectedFilms.title}</h1>
-    <p> <strong>Release Date:</strong> {selectedFilms.release_date}</p>
+    <h4> <strong>Release Date:</strong> {selectedFilms.release_date}</h4>
     <p> <strong>Description:</strong> {selectedFilms.description}</p>
 
     

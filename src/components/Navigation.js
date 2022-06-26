@@ -1,20 +1,21 @@
 import React from 'react';
+// import index from "../index.css"
 import { Link } from "react-router-dom";
 import Logo from "./Logo.js";
 
 const Navigation = () => {
   return (
-    <nav className="navbar">
-        <div>
+    <nav >
+        <div className="navbar">
             <Logo />
             <h5>
-                <Link to="/movies">Movies</Link>
+                <Link className="link" to="/movies">Movies</Link>
             </h5>
             <h5>
-                <Link to="/people">People</Link>
+                <Link  className="link" to="/people">People</Link>
             </h5>
             <h5>
-                <Link to="/locations">Locations</Link>
+                <Link className="link" to="/locations">Locations</Link>
             </h5>
         </div>
 

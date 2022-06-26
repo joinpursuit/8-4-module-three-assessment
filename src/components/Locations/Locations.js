@@ -4,7 +4,7 @@ import LocationsPage from './LocationsPage';
 
 const Locations = () => {
   const [locations, setLocations] = useState([]);
-  const [showLocation, setShowLocation] = useState(true)
+  const [showLocation, setShowLocation] = useState(false)
 
   const getLocations = () => {
     fetch(`https://ghibliapi.herokuapp.com/locations`)
