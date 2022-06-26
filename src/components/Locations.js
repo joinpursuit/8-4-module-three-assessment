@@ -15,18 +15,20 @@ export default function Locations({ location, setLocation }) {
       });
   }, [setLocation]);
 
+  // console.log(location)
+
   const handleSubmit = (e) => {
     e.preventDefault()
     location.map((local) => {
       return (
-        <div>
+        <>
           <button>HIDE LOCATIONS</button>
           <ul>
             <ul>Name: {local.name}</ul>
             <ul>Climate: {local.climate}</ul>
             <ul>Terrain: {local.terrain}</ul>
           </ul>
-        </div>
+        </>
       );
     });
   };
@@ -34,8 +36,8 @@ export default function Locations({ location, setLocation }) {
   return (
     <div className="locations">
       <h1>List of Locations</h1>
-      <form onSubmit={ handleSubmit }>
-        <button>SHOW LOCATIONS</button>
+      <form>
+        <button onSubmit={ handleSubmit }>SHOW LOCATIONS</button>
       </form>
     </div>
   );

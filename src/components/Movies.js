@@ -19,23 +19,23 @@ export default function Movies({ movie, setMovie }) {
     e.preventDefault();
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    movie.map((mov) => {
-      return (
-        <div>
-          <h1>Title: {mov.title}</h1>
-          <h3>Release Date: {mov.release_date}</h3>
-          <h3>Description: {mov.description}</h3>
-        </div>
-      );
-    });
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   movie.map((mov) => {
+  //     return (
+  //       <div>
+  //         <h1>Title: {mov.title}</h1>
+  //         <h3>Release Date: {mov.release_date}</h3>
+  //         <h3>Description: {mov.description}</h3>
+  //       </div>
+  //     );
+  //   });
+  // };
 
   return (
     <div className="movies">
       <h1>Select a Movie</h1>
-      <form onSubmit={handleSubmit}>
+      <form>
         <select onChange={handleChange}>
           <option></option>
           {movie.map((mov) => {
