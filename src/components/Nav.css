@@ -9,35 +9,26 @@ img {
     /* width: 50%; */
 }
 
-ul {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    /* grid-column: 2/3; */
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    /* overflow: hidden; */
-    background-color: #333;
-  }
+nav {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  /* grid-column: 2/3; */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+  background-color: #333;
+}
+
+nav a {  
+  display: grid;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
   
-  li {
-    display: grid;
-    float: left;
-    grid-column: auto;
-    /* width: 50%; */
-    /* margin-left: 50px; */
-    /* text-align: center; */
-  }
-  
-  li a {
-    display: grid;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  /* Change the link color to #111 (black) on hover */
-  li a:hover {
-    background-color: #111;
-  }
+}
+
+nav a:hover {
+  background-color: #111;
+}

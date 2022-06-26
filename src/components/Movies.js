@@ -33,7 +33,7 @@ const movieInfo = (e) => {
 if (id) {
   return (
     <div className="infoBox">
-    <p id="title"><strong>Title:</strong> {currentSelectedMovie.title}</p> 
+    <p className="header" id="title"><strong>Title:</strong> {currentSelectedMovie.title} </p> 
     <p><strong>Release Data:</strong> {currentSelectedMovie.release_date}</p> 
     <p><strong>Description:</strong> {currentSelectedMovie.description}</p> 
     </div>
@@ -52,7 +52,7 @@ if (id) {
         {allMovies.map((movie) => {
           return (
             <option key={movie.id} value={movie.id}>
-              {movie.title}
+             {movie.title}
             </option>
           );
         })}
