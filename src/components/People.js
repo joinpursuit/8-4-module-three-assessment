@@ -15,7 +15,7 @@ const People = () => {
   const handleSubmit = (e) =>{
     e.preventDefault();
 
-    const foundPerson = people.find(person => person.name.toLowerCase() == userRequest.toLowerCase())
+    const foundPerson = people.find(person => person.name.toLowerCase() === userRequest.toLowerCase())
 
     setPerson(foundPerson)
     setUserRequest("")

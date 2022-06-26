@@ -37,23 +37,61 @@
   text-align: center;
 }
 
+.people button{
+  margin: 0px 5px;
+}
+
 .person span{
   font-weight: bold;
 }
 
 .locations{
   text-align: center;
+  display: grid;
+  grid-template-areas:
+  "h h h h"
+  "s n c t"
+  "l l l l";
 }
 
-.locations-list{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.locations h1{
+  grid-area: h;
+}
+
+.show{
+  grid-area: s;
+}
+
+.name{
+  grid-area: n;
+}
+
+.climate{
+  grid-area: c;
+}
+
+.terrain{
+  grid-area: t;
 }
 
 .location{
   border: 1px solid black;
   padding: 5px;
   margin: 5px;
+  margin-right: 45px;
+}
+
+.location span{
+  font-weight: bold;
+}
+
+li{
+  list-style: none;
+  padding: 5px;
+}
+
+.locations button{
+  margin: 0px 5px;
 }
 
 
