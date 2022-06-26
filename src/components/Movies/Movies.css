@@ -1,0 +1,17 @@
+#title {
+    font-size: 35px;
+}
+
+div {
+    text-align: center;
+    height: 100%;
+}
+select {
+    font-size: 20px;
+}
+
+.infoBox {
+    font-size: 20px;
+    width: 70%;
+}
+

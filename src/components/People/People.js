@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import "./People.css"
 
-export default function People({ allPeople, setAllPeople }) {
+export default function People({ allPeople }) {
   const [userInput, setUserInput] = useState("");
   const [found, setFound] = useState([]);
 
@@ -11,7 +12,6 @@ export default function People({ allPeople, setAllPeople }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    //need a condition here --- if found set it - else reset to [];
     setFound(
       allPeople.find(
         (people) =>
@@ -19,7 +19,6 @@ export default function People({ allPeople, setAllPeople }) {
       )
     );
     setUserInput("");
-    // setFound([])
   };
 
   const peopleInfo = () => {
@@ -31,7 +30,7 @@ export default function People({ allPeople, setAllPeople }) {
       );
     } else if (Object.keys(found).length >= 1 && found) {
       return (
-        <div>
+        <div className="people-infoBox">
           <p>
             <strong>Name:</strong> {found.name}
           </p>
@@ -54,7 +53,7 @@ export default function People({ allPeople, setAllPeople }) {
       <h1>Search for a Person</h1>
       <form action="" onSubmit={handleSubmit}>
         <input type="text" onChange={handleChange} value={userInput} />
-        <button type="submit">SUBMIT</button>
+        <button id="people-button" type="submit">SUBMIT</button>
       </form>
       {peopleInfo()}
     </div>
