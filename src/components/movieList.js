@@ -50,6 +50,7 @@ export const Movies = () => {
             <Movie
               movie={singleMovie.title}
               ogTitle={singleMovie.original_title}
+              ogTitleRoman={singleMovie.original_title_romanised}
               director={singleMovie.director}
               releaseDate={singleMovie.release_date}
               runningTime={singleMovie.running_time}
