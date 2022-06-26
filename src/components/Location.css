@@ -10,11 +10,10 @@
   li{
     list-style: none;
     padding: 5px;
-    font-weight: bold;
   }
   
-  li span{
-    font-weight: normal;
+  .span-one{
+    font-weight: bold;
   }
   
   .locations button{
