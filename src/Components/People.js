@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "./People.css";
+// import the PeopleCard component created with People props
 import PeopleCard from "./PeopleCard";
 
 function People() {
 
+// create a useState for list of people set to empty array 
+// create a useState for user input set to an empty string - input element
   const [people, setPeople] = useState([]);
   const [input, setInput] = useState("");
-  // console.log(people);
 
+
+    // fetch people data from ghibliapi and set returned data to updated useState people list - setPeople - w/ catch for any 404 errors
   useEffect(() => {
     fetch("https://ghibliapi.herokuapp.com/people")
       .then((response) => response.json())
@@ -15,9 +19,10 @@ function People() {
       .catch((error) => console.log(error));
   }, []);
 
+  
   const foundPerson = people.find(person => person.name === input)
-  // const formatedInput = input.toLowerCase()
 
+    // create EVENT on handleSubmit that wont refresh the page  - when updated useState for user input value changes - setInput 
   const handleSubmit = (e) => {
     e.preventDefault();
     setInput(e.target.value)
@@ -27,7 +32,9 @@ function People() {
   return (
     <div>
       <h1>Search for a Person</h1>
+            {/* handleSumbit EVENT will run on - form - onSubmit */}
       <form onSubmit={handleSubmit}>
+              {/* depending on the user input update the useState with new value  */}
         <input onChange={(e) => setInput(e.target.value)} type="text" ></input> 
         
         <button>Submit</button>

@@ -21,17 +21,16 @@ function App() {
       .then((data) => setMovies(data))
 
   })
-
   
 
-  
+
   return (
     <Router>
       <div className="App">
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/movies" element={<Movies movies={movies} />} />
+          <Route path="/movies" element={<Movies />} />
           <Route path="/people" element={<People />} />
           <Route path="/locations" element={<Locations />} />
         </Routes>
