@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 
 import { Movie } from "./movie";
 
+import "./movieList.css";
+
 export const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [singleMovie, setMovie] = useState([]);
