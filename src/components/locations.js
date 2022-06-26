@@ -29,6 +29,7 @@ CHECK Within each location list item should be another unordered list. The list 
 
 import { React, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
+import { Row, Col } from "react-bootstrap";
 import "./locations.css";
 
 import LocationCard from "./locationCard";
@@ -42,48 +43,54 @@ export const Locations = () => {
   };
 
   const handleTerrain = () => {
-    //sorting by terrain
-    setLocations(locations.sort((a, b) => {
-      let terrainA = a.terrain.toLowerCase();
-      let terrainB = b.terrain.toLowerCase();
-      if (terrainA < terrainB) {
-        return -1;
-      }
-      if (terrainA > terrainB) {
-        return 1;
-      }
-      return 0;
-    }));
+    // sorting by terrain
+    setLocations((prev) =>
+      [...prev].sort((a, b) => {
+        let terrainA = a.terrain.toLowerCase();
+        let terrainB = b.terrain.toLowerCase();
+        if (terrainA < terrainB) {
+          return -1;
+        }
+        if (terrainA > terrainB) {
+          return 1;
+        }
+        return 0;
+      })
+    );
   };
 
   const handleClimate = () => {
     //sorting by climate
-    locations.sort((a, b) => {
-      let climateA = a.climate.toLowerCase();
-      let climateB = b.climate.toLowerCase();
-      if (climateA < climateB) {
-        return -1;
-      }
-      if (climateA > climateB) {
-        return 1;
-      }
-      return 0;
-    });
+    setLocations((prev) =>
+      [...prev].sort((a, b) => {
+        let climateA = a.climate.toLowerCase();
+        let climateB = b.climate.toLowerCase();
+        if (climateA < climateB) {
+          return -1;
+        }
+        if (climateA > climateB) {
+          return 1;
+        }
+        return 0;
+      })
+    );
   };
 
   const handleName = () => [
     //sorting by name
-    locations.sort((a, b) => {
-      let nameA = a.name.toLowerCase();
-      let nameB = b.name.toLowerCase();
-      if (nameA < nameB) {
-        return -1;
-      }
-      if (nameA > nameB) {
-        return 1;
-      }
-      return 0;
-    })
+    setLocations((prev) =>
+      [...prev].sort((a, b) => {
+        let nameA = a.name.toLowerCase();
+        let nameB = b.name.toLowerCase();
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+        return 0;
+      })
+    ),
   ];
 
   useEffect(() => {
@@ -109,19 +116,23 @@ export const Locations = () => {
       {visible ? (
         <div>
           <ul className="locations">
-            {locations.map((location) => {
-              return (
-                <li className="location-card">
-                  <LocationCard
-                    name={location.name}
-                    climate={location.climate}
-                    terrain={location.terrain}
-                    key={location.id}
-                  />
-                  <br></br>
-                </li>
-              );
-            })}
+            <Row xs={1} md={3}>
+              {locations.map((location) => {
+                return (
+                  <Col>
+                    <li className="location-card">
+                      <LocationCard
+                        name={location.name}
+                        climate={location.climate}
+                        terrain={location.terrain}
+                        key={location.id}
+                      />
+                      <br></br>
+                    </li>
+                  </Col>
+                );
+              })}
+            </Row>
           </ul>
         </div>
       ) : null}
