@@ -1,0 +1,33 @@
+.nav {
+    display: flex;
+    position: sticky;
+   width: 100%;
+   background: rgb(45, 106, 120);
+   top: 0;
+    height: 50px;
+    align-items: center;
+    font-size: 20px;
+    justify-content: space-evenly;
+    padding: 1em;
+    
+
+  }
+
+  .nav__logo {
+    height: 50px;
+    width: 50px;
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-size: large;
+    left: 10px;
+   
+  }
+  .nav__element {
+    color:bisque;
+    text-decoration: none;
+    text-shadow: 2px 2px #3e1f1f;
+
+  }
+  
+ 
