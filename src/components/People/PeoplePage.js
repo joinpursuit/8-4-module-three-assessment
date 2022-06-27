@@ -1,7 +1,7 @@
 import React from 'react';
 // import { useParams } from 'react-router-dom';
 
-const PeoplePage = ({ people, search }) => {
+const PeoplePage = ({ actors }) => {
         // const { id } = useParams();
         // console.log(people)
         // const searchedPerson = people.find((person) => {
@@ -16,10 +16,10 @@ const PeoplePage = ({ people, search }) => {
         // console.log(searchedPerson)
   return (
     <div>
-        <h2><strong>Name:</strong>{}</h2>
-        <p><strong>Age:</strong>{}</p>
-        <p><strong>Eye Color:</strong>{}</p>
-        <p><strong>Hair Color:</strong>{}</p>
+        <h2><strong>Name:</strong>{actors[0].name}</h2>
+        <p><strong>Age:</strong>{actors[0].age}</p>
+        <p><strong>Eye Color:</strong>{actors[0].eye_color}</p>
+        <p><strong>Hair Color:</strong>{actors[0].hair_color}</p>
     </div>
   )
 }

@@ -1,14 +1,16 @@
-import React from 'react';
+import React from "react";
 
-const LocationsCard = ({location}) => {
-    // console.log(location)
+const LocationsCard = ({ location }) => {
+  // console.log(location)
   return (
     <div>
-        <li>Name:{location.name}</li>
-        <li>Terrain:{location.terrain}</li>
-        <li>Climate:{location.climate}</li>
+      <li>
+        <p>Name: {location.name}</p>
+        <p>Climate: {location.climate}</p>
+        <p>Terrain: {location.terrain}</p>
+      </li>
     </div>
-  )
-}
+  );
+};
 
 export default LocationsCard;

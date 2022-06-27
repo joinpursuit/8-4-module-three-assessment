@@ -4,6 +4,7 @@ import PeoplePage from './PeoplePage';
 const People = () => {
   const [people, setPeople] = useState([]);
   const [search, setSearch] = useState('');
+  const [actors, setActors] = useState([]);
 
   useEffect(() => {
     fetch(`https://ghibliapi.herokuapp.com/people`)
@@ -14,6 +15,14 @@ const People = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    // setSearch(event.target.value)
+    setActors(people.filter((person) => {
+      return (person.name.toUpperCase() === search.toUpperCase())
+    }))
+  }
+
+
+  const handleChange = (event) => {
     setSearch(event.target.value)
   }
 // console.log(people);
@@ -27,10 +36,10 @@ const People = () => {
     <div className="people">
         <h1> Search for a Person </h1>
         <form onSubmit={handleSubmit}>
-          <input type="text"   onChange={(event) => setSearch(event.target.value)} value={search} placeholder="Search a Person"/>
+          <input type="text"   value={search} onChange={handleChange} placeholder="Search a Person"/>
           <button type="submit">SUBMIT</button>
         </form>
-        <PeoplePage people={people} search={search}/>
+        {actors.length > 0 ? (<PeoplePage actors={actors}/>) : (<h1>Not Found</h1>)}
 
     </div>
   )

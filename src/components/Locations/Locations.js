@@ -12,10 +12,10 @@ const Locations = () => {
        .then((data) => setLocations(data))
        .catch((error) => console.log(error));
   }
-
+// console.log(setLocations)
   useEffect(() => {
     getLocations();
-  })
+  },[])
 
 
   return (
@@ -23,7 +23,7 @@ const Locations = () => {
 
         <h1>List of Locations</h1>
         <button onClick={() => {setShowLocation(!showLocation)}}>{!showLocation ? "SHOW LOCATIONS": "HIDE LOCATIONS"}</button>
-        <p>{showLocation ? <LocationsPage locations={locations}/> : null}</p>
+        <p>{showLocation ? <LocationsPage locations={locations} setLocations={setLocations}/> : null}</p>
 
     </div>
   )
