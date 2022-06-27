@@ -6,7 +6,7 @@ function Logo() {
   const img = GhibliLogo
   return (
     <div>
-      <img src={img} alt="ghibli-logo" style={{height:"150px", width:"150px"}}/>
+      <img src={img} alt="ghibli-logo" style={{height:"100px", width:"100px"}}/>
     </div>
   )
 }

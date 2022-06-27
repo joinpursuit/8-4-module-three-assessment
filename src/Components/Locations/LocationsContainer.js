@@ -8,12 +8,12 @@ function LocationsContainer({ locations, setLocations }) {
   //   e.preventDefault()
   //   setSortNames(!sortNames)
   // }
-  const [ key, setKey ] = useState("")
+  // const [ key, setKey ] = useState("")
 
-  const sortedByName = locations.sort((a,b) => (a.name < b.name ? 1: -1))
+  // const sortedByName = locations.sort((a,b) => (a.name < b.name ? 1 : -1))
   // const sortedByClimate = locations.sort((a,b)=> (a.key < b.climate ? 1 : -1))
   // const mappedByTerrain = locations.sort((a,b)=> (a.terrain < b.terrain ? 1 : -1))
-  console.log(sortedByName)
+  // console.log(sortedByName)
   
   
   return (
@@ -23,13 +23,15 @@ function LocationsContainer({ locations, setLocations }) {
       <button id="climate-button">SORT BY CLIMATE</button>
       <button id="terrain-button">SORT BY TERRAIN</button>
       <section>
+        <ul className="section">
         {locations.map((location) => {
           return (
-            <ul key={location.id}>
+           <li>
               <LocationCard location={location} />
-            </ul>
+           </li>
           );
         })}
+        </ul>
       </section>
     </div>
   );

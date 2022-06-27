@@ -33,7 +33,7 @@ function People() {
         <input onChange={handleChange} type="text" value={input} ></input> 
         <button>Submit</button>
       </form>
-      { foundPerson.length > 0 ? (<PersonCard foundPerson={foundPerson}/>) : (<h1>Not Found</h1>)}
+      { foundPerson.length > 0 ? (<PersonCard foundPerson={foundPerson}/>) : (<p>Not Found</p>)}
     </div>
   );
 }

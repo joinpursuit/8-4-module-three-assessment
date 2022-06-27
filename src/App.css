@@ -4,3 +4,28 @@
   text-align: center;
 }
 
+.hidden{
+  display: none;
+}
+
+body{
+  background-color: lavender;
+  font-family: monospace;   
+}
+
+header{
+  background-color: skyblue;
+}
+
+
+@media (min-width: 500px){
+  #reviews{
+      display:block;
+  }
+}
+
+@media(max-width: 449px){
+  #reviews{
+      display:none;
+  }
+}

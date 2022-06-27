@@ -1,12 +1,13 @@
 import React from 'react'
-
+import "./Locations.css"
 function LocationCard({location}) {
   return (
-    <div>
-      <li><strong>Name:</strong> {location.name}</li>
-      <li><strong>Terrain:</strong> {location.terrain}</li>
-      <li><strong>Climate:</strong> {location.climate}</li>
-    
+    <div className='location-card'>
+    <li>
+      <p><strong>Name:</strong> {location.name}</p>
+      <p><strong>Terrain:</strong> {location.terrain}</p>
+      <p><strong>Climate:</strong> {location.climate}</p>
+    </li>
     </div>
   )
 }

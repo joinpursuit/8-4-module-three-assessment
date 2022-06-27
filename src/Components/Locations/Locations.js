@@ -20,7 +20,7 @@ function Locations() {
   return (
     <div className="locations">
       <h1>List of Locations</h1>
-      <button id="show-button" onClick={() => {setShowMore(!showMore);}}>
+      <button id="show-button" onClick={() => {setShowMore(!showMore)}}>
         {!showMore ? "Show Locations" : "Hide Locations"}
       </button>
       <p> {showMore ? <LocationsContainer setLocations={setLocations} locations={locations}/> : null}</p>
