@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import PeoplePage from './PeoplePage';
+import "./People.css";
 
 const People = () => {
   const [people, setPeople] = useState([]);
   const [search, setSearch] = useState('');
   const [actors, setActors] = useState([]);
+  const [notFound, setNotFound] = useState("");
 
   useEffect(() => {
     fetch(`https://ghibliapi.herokuapp.com/people`)
@@ -19,6 +21,10 @@ const People = () => {
     setActors(people.filter((person) => {
       return (person.name.toUpperCase() === search.toUpperCase())
     }))
+    if (actors.length > 1) {
+      setNotFound("Not Found");
+    }
+    setSearch("")
   }
 
 
@@ -36,10 +42,10 @@ const People = () => {
     <div className="people">
         <h1> Search for a Person </h1>
         <form onSubmit={handleSubmit}>
-          <input type="text"   value={search} onChange={handleChange} placeholder="Search a Person"/>
-          <button type="submit">SUBMIT</button>
+          <input className="inp" type="text"   value={search} onChange={handleChange} placeholder="Search a Person"/>
+          <button className="btn" type="submit">SUBMIT</button>
         </form>
-        {actors.length > 0 ? (<PeoplePage actors={actors}/>) : (<h1>Not Found</h1>)}
+        {actors.length > 0 ? (<PeoplePage actors={actors}/>) : (<h1>{notFound}</h1>)}
 
     </div>
   )

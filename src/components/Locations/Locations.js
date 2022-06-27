@@ -1,5 +1,6 @@
 import React,{ useState, useEffect } from 'react';
 import LocationsPage from './LocationsPage';
+import "./Locations.css";
 
 
 const Locations = () => {

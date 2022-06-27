@@ -1,0 +1,16 @@
+.locations {
+    text-align: center;
+
+}
+
+.main-list {
+    display: grid;
+    /* grid-template-areas:  */
+    /* "n c t"; */
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.list-out {
+    display: grid;
+    /* grid-area: c; */
+}

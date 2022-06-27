@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import LocationsCard from './LocationsCard';
+import "./Locations.css";
 
 const LocationsPage = ({ locations, setLocations }) => {
 // console.log(setLocations)
@@ -77,14 +78,14 @@ const LocationsPage = ({ locations, setLocations }) => {
 
     }
   return (
-    <div>
+    <div className='locations'>
         <button onClick={sortedName}>SORT BY NAME</button>
         <button onClick={sortedClimate}>SORT BY CLIMATE</button>
         <button onClick={sortedTerrain}>SORT BY TERRAIN</button>
         <section>
             {locations.map((location) => {
                 return (
-                    <ul>
+                    <ul className='main-list'>
                         {notSorted? <LocationsCard location={location} /> : null}
                     </ul>
                 )
