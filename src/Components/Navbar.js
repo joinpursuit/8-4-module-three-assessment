@@ -16,7 +16,7 @@ export default function Navbar() {
                 <Link to="/people">People</Link> 
             </h2>
             <h2>
-                <Link to="/locations">People</Link> 
+                <Link to="/locations">Locations</Link> 
             </h2>
         </nav>
     </div>
