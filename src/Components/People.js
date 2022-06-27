@@ -6,7 +6,7 @@ import PersonCard from "./PersonCard";
 export default function People() {
   const [people, setPeople] = useState([]);
   const [search, setSearch] = useState("");
-  const [persons, setPersons] = useState('')
+  const [match, setMatch] = useState('')
   const [didSubmit, setDidSubmit] = useState(false)
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export default function People() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setPersons(search)
+    setMatch(search)
     setSearch('')
     setDidSubmit(true)
   };
@@ -25,12 +25,12 @@ export default function People() {
     setDidSubmit(false)
   } 
 
-  const foundPerson = people.find((person) => person.name === persons);
+  const foundPerson = people.find((person) => person.name.toUpperCase() === match.toUpperCase());
 
   return (
     <div className="people">
       <form className="form">
-        <label>Search for a Person</label>
+        <h1>Search for a Person</h1>
         <input
           type="text"
           placeholder="Search..."
@@ -47,4 +47,6 @@ export default function People() {
   );
 }
 
+// used this youtube link to learn the didSubmit state : 
+//  https://www.youtube.com/watch?v=8hU0I8rY4u4
 

@@ -3,7 +3,7 @@ import React from "react";
 export default function Home() {
   return (
     <div>
-      <h1>WELCOME TO GHIBLIAPP</h1>
+      <h1>Welcome to GhibliApp</h1>
     </div>
   );
 }
