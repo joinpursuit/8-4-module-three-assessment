@@ -1,6 +1,6 @@
 /** @format */
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Components/Home';
@@ -11,6 +11,18 @@ import People from './Components/People';
 import ghibliFilms from './api/ghibli';
 
 function App() {
+	const [ghibliFilms, setGhibliFilms] = useState([]);
+	const baseURL = 'https://ghibliapi.herokuapp.com';
+
+	useEffect(() => {
+		async function fetchGhibliFilms() {
+			const response = await fetch(`${baseURL}/films`);
+			const fetchedGhibliFilms = await response.json(response);
+			setGhibliFilms(fetchedGhibliFilms);
+		}
+		fetchGhibliFilms();
+	}, []);
+
 	return (
 		<div className='ghibli-app'>
 			<Router>
