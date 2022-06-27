@@ -29,6 +29,7 @@ export default function People() {
     if(human.length < 1){
       setNotFound("Not Found")
     }
+    setInput("")
   }
 
   return (

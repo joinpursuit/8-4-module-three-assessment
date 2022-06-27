@@ -42,7 +42,7 @@ export default function Locations() {
         return 0;
       })
     );
-    setNonSorted(true);
+    setNonSorted(false);
     setName(true);
     setClimate(false);
     setTerrain(false);
@@ -63,7 +63,7 @@ export default function Locations() {
         return 0;
       })
     );
-    setNonSorted(true);
+    setNonSorted(false);
     setName(false);
     setClimate(true);
     setTerrain(false);
@@ -84,7 +84,7 @@ export default function Locations() {
         return 0;
       })
     );
-    setNonSorted(true);
+    setNonSorted(false);
     setName(false);
     setClimate(false);
     setTerrain(true);
