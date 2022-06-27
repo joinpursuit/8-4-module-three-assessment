@@ -1,0 +1,10 @@
+form{
+  text-align: center;
+  background-color: rgb(255, 249, 180);
+  margin: 10px 50px;
+  height: 580px;
+}
+.result{
+  text-align: center;
+  margin-left: 350px;
+}
