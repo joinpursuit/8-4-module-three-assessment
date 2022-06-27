@@ -9,6 +9,12 @@ export const Locations = () => {
   const [locations, setLocations] = useState([]);
   const [visible, setVisible] = useState(false);
 
+  useEffect(() => {
+    fetch("https://ghibliapi.herokuapp.com/locations")
+      .then((response) => response.json())
+      .then((data) => setLocations(data));
+  }, []);
+
   const handleClick = (e) => {
     !visible ? setVisible(true) : setVisible(false);
   };
@@ -64,25 +70,27 @@ export const Locations = () => {
     ),
   ];
 
-  useEffect(() => {
-    fetch("https://ghibliapi.herokuapp.com/locations")
-      .then((response) => response.json())
-      .then((data) => setLocations(data));
-  }, []);
-
   return (
     <div className="locations">
-      <h1>List of Locations</h1>
-      <Button onClick={handleClick}>
-        {visible ? "Hide Locations" : "Show Locations"}
-      </Button>
-      {visible ? (
-        <>
-          <Button onClick={handleTerrain}>Sort by Terrain</Button>
-          <Button onClick={handleClimate}>Sort by Climate</Button>
-          <Button onClick={handleName}>Sort by Name</Button>
-        </>
-      ) : null}
+      <header>
+        <h1 id="title">List of Locations</h1>
+        <Button onClick={handleClick} variant="primary" size="lg">
+          {visible ? "Hide Locations" : "Show Locations"}
+        </Button>
+        {visible ? (
+          <div id="sorting-buttons">
+            <Button variant="secondary" onClick={handleTerrain}>
+              Sort by Terrain
+            </Button>
+            <Button variant="secondary" onClick={handleClimate}>
+              Sort by Climate
+            </Button>
+            <Button variant="secondary" onClick={handleName}>
+              Sort by Name
+            </Button>
+          </div>
+        ) : null}
+      </header>
 
       {visible ? (
         <div>

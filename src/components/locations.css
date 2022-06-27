@@ -2,7 +2,12 @@ ul {
     list-style-type: none;
 }
 
+header {
+    background-color: lightskyblue;
+}
+
 .locations {
+    text-align: center;
 }
 
 .location-card {
