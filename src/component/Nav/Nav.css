@@ -1,0 +1,7 @@
+.navigation{
+  background-color: #055569;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  color: aqua;
+  padding: 15px 0px;
+}
