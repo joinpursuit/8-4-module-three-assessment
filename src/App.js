@@ -11,6 +11,8 @@ import People from './Components/People';
 
 function App() {
 	const [ghibliFilms, setGhibliFilms] = useState([]);
+	const [ghibliPeople, setGhibliPeople] = useState([]);
+
 	const baseURL = 'https://ghibliapi.herokuapp.com';
 
 	useEffect(() => {
@@ -20,6 +22,15 @@ function App() {
 			setGhibliFilms(fetchedGhibliFilms);
 		}
 		fetchGhibliFilms();
+	}, []);
+
+	useEffect(() => {
+		async function fetchGhibliPeople() {
+			const response = await fetch(`${baseURL}/people`);
+			const fetchedGhibliPeople = await response.json(response);
+			setGhibliPeople(fetchedGhibliPeople);
+		}
+		fetchGhibliPeople();
 	}, []);
 
 	return (
@@ -32,7 +43,10 @@ function App() {
 						path='/movies'
 						element={<Movies ghibliFilms={ghibliFilms} />}
 					/>
-					<Route path='/people' element={<People />} />
+					<Route
+						path='/people'
+						element={<People ghibliPeople={ghibliPeople} />}
+					/>
 					<Route path='/locations' element={<Locations />} />
 				</Routes>
 			</Router>
