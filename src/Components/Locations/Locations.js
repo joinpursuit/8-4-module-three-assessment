@@ -4,7 +4,7 @@ import LocationsContainer from "./LocationsContainer";
 
 function Locations() {
   const [locations, setLocations] = useState([]);
-  const [showMore, setShowMore] = useState(true);
+  const [showMore, setShowMore] = useState(false);
 
   const getLocations = () => {
     fetch(`https://ghibliapi.herokuapp.com/locations`)
@@ -18,12 +18,12 @@ function Locations() {
   }, []);
 
   return (
-    <div>
+    <div className="locations">
       <h1>List of Locations</h1>
       <button id="show-button" onClick={() => {setShowMore(!showMore);}}>
-        {!showMore ? "SHOW LOCATIONS" : "HIDE LOCATIONS"}
+        {!showMore ? "Show Locations" : "Hide Locations"}
       </button>
-      <p> {showMore ? <LocationsContainer locations={locations}/> : null}</p>
+      <p> {showMore ? <LocationsContainer setLocations={setLocations} locations={locations}/> : null}</p>
       
     </div>
   );

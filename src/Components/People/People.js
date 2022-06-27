@@ -6,6 +6,7 @@ function People() {
 
   const [people, setPeople] = useState([]);
   const [input, setInput] = useState("");
+  const [foundPerson, setFoundPerson] = useState([])
   // console.log(people);
 
   useEffect(() => {
@@ -15,24 +16,24 @@ function People() {
       .catch((error) => console.log(error));
   }, []);
 
-  const foundPerson = people.find(person => person.name === input)
-  // const formatedInput = input.toLowerCase()
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    setInput(e.target.value)
+    setFoundPerson(people.filter(person => person.name.toUpperCase() === input.toUpperCase()))
   }
 
-  console.log(foundPerson)
+  const handleChange = (e) => {
+    e.preventDefault()
+    setInput(e.target.value)
+  }
+  
   return (
-    <div>
+    <div className="people">
       <h1>Search for a Person</h1>
       <form onSubmit={handleSubmit}>
-        <input onChange={(e) => setInput(e.target.value)} type="text" ></input> 
-        
+        <input onChange={handleChange} type="text" value={input} ></input> 
         <button>Submit</button>
       </form>
-      <PersonCard foundPerson={foundPerson}/>
+      { foundPerson.length > 0 ? (<PersonCard foundPerson={foundPerson}/>) : (<h1>Not Found</h1>)}
     </div>
   );
 }

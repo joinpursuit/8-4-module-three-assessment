@@ -4,19 +4,13 @@ import React from 'react'
 
 function PersonCard({ foundPerson }) {
 
-  if(!foundPerson) {
-    return(
-      <div>
-        <p>Please enter a person's name!</p>
-      </div>
-    )
-  }  
+  const [person] = foundPerson
   return (
     <div>
-      <h1>Name: {foundPerson.name}</h1>
-      <p><strong>Age: </strong>{foundPerson.age}</p>
-      <p><strong>Eye Color: </strong>{foundPerson.eye_color}</p>
-      <p><strong>Hair Color: </strong>{foundPerson.hair_color}</p>
+      <h1>Name: {person.name}</h1>
+      <p><strong>Age: </strong>{person.age}</p>
+      <p><strong>Eye Color: </strong>{person.eye_color}</p>
+      <p><strong>Hair Color: </strong>{person.hair_color}</p>
       
     </div>
   )
