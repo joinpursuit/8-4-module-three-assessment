@@ -21,9 +21,9 @@ function Locations() {
     <div>
       <h1>List of Locations</h1>
       <button id="show-button" onClick={() => {setShowMore(!showMore);}}>
-        {!showMore ? "SHOW LOCATIONS" : "HIDE LOCATIONS"}
+        {!showMore ? "HIDE LOCATIONS" : "SHOW LOCATIONS"}
       </button>
-      <p> {showMore ? <LocationsContainer locations={locations}/> : null}</p>
+      <p> {!showMore ? <LocationsContainer locations={locations}/> : null}</p>
       
     </div>
   );
