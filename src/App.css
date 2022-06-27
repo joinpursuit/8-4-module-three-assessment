@@ -1,6 +1,58 @@
+/** @format */
 
-
-.app {
-  text-align: center;
+.ghibli-app {
+	text-align: center;
 }
 
+/** @format */
+
+body {
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	margin: 10px;
+	padding: 10px;
+	display: inline;
+}
+
+ul li :link {
+	text-decoration: none;
+}
+
+a {
+	color: lightblue;
+}
+
+.navbar {
+	background: rgb(14, 102, 137);
+	padding: 35px;
+	margin: 0 auto;
+}
+
+.movies {
+	margin: 0 auto;
+	width: 40%;
+	height: 100%;
+}
+
+h2 span {
+	font-weight: 400;
+}
+
+.movie-description {
+	background: lightcoral;
+	padding: 30px;
+	margin-top: 20px;
+	width: fit-content;
+}
+
+.film-info {
+	display: inline-block;
+}
