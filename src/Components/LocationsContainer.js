@@ -1,13 +1,15 @@
 import React from "react";
+// import LocationCard created with the sorted data 
 import LocationCard from "./LocationCard";
 
+// with the  locations list added to LocationsContainer component as props 
+
 function LocationsContainer({ locations }) {
+  
   const mappedByName = locations.sort((a,b)=> (a.name > b.name)*2-1)
-  const mappedByClimate = locations.sort((a,b)=> (a.climate > b.climate)*2-1)
-  const mappedByTerrain = locations.sort((a,b)=> (a.terrain > b.terrain)*2-1)
-  // console.log(mappedByName)
-  console.log(mappedByClimate)
-  // console.log(mappedByTerrain)
+  
+  console.log(mappedByName)
+  
 
   return (
     <div>
