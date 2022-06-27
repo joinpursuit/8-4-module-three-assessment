@@ -1,0 +1,26 @@
+div {
+    background-color:whitesmoke;
+    font-family: sans-serif;
+}
+
+.moviecard {
+    font-size: x-large;
+    font-family:sans-serif;
+    padding:1.2em 40px 1.2em 50px;
+    border-radius: 10px;
+    text-align: left;
+    position: relative;
+    width:100%;
+    margin:25px auto;
+}
+
+h4, h5 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+h3 {
+    font-size: xx-large;
+    font-family: sans-serif;
+}
+
