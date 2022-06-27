@@ -8,9 +8,16 @@
     /* grid-template-areas:  */
     /* "n c t"; */
     grid-template-columns: 1fr 1fr 1fr;
+    /* color: red; */
+    /* border: 1px solid grey; */
+    padding: 2px;
+    /* background-color: grey; */
+    gap: 1rem;
 }
 
 .list-out {
-    display: grid;
-    /* grid-area: c; */
+    list-style: none;
+    border: 1px solid grey;
+    padding: 3px;
+    background-color: limegreen;
 }

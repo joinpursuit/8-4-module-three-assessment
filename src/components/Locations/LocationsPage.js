@@ -83,13 +83,15 @@ const LocationsPage = ({ locations, setLocations }) => {
         <button onClick={sortedClimate}>SORT BY CLIMATE</button>
         <button onClick={sortedTerrain}>SORT BY TERRAIN</button>
         <section>
+        <ul className='main-list'>
             {locations.map((location) => {
                 return (
-                    <ul className='main-list'>
+                    <li className='list-out'>
                         {notSorted? <LocationsCard location={location} /> : null}
-                    </ul>
+                        </li>
                 )
             })}
+            </ul>
         </section>
 
     </div>
