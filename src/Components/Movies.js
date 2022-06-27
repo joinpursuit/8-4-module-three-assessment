@@ -51,4 +51,3 @@ const Movies = (props) => {
 };
 
 export default Movies;
-// {(e) => setGhibliFilmTitles(filmTitles)}

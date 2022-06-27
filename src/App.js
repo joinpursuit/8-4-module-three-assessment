@@ -8,6 +8,7 @@ import NavBar from './Components/NavBar';
 import Movies from './Components/Movies';
 import Locations from './Components/Locations';
 import People from './Components/People';
+import ghibliFilms from './api/ghibli';
 
 function App() {
 	const [ghibliFilms, setGhibliFilms] = useState([]);
