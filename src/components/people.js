@@ -46,7 +46,7 @@ export const People = () => {
     ) : null;
   };
   // You know what's a bad idea? Nesting ternaries. Can get out of hand fast.
-  // Don't go deeper than this like, ever.
+  // Think about other ways to do this.
 
   return (
     <div className="people">

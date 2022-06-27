@@ -1,32 +1,3 @@
-/*
- CHECK All content should be inside of some element with the class .locations.
-
- CHECK Has the text "List of Locations" on the page.
-
- CHECK When arriving on the page, has a button with the text "Show Locations".
-
- When the "Show Locations" button is clicked, the text should be changed to "Hide Locations".
-
- When the "Show Locations" button is clicked, all of the locations received from the API should be displayed. Each location should include it's name, climate, and terrain.
-
- CHECK Use list items to display each of these locations.
-
-Note
-
-CHECK Locations should be made up of an unordered list
-CHECK Within each location list item should be another unordered list. The list items within this list should be
-        -location name
-        -location climate
-        -location terrain
-
-*/
-
-// Sorting thoughts - a main function that handles how the data is passed into
-// the locationCard component. Default is as the API provides, 'Sort by Climate' and
-// 'Sort by Terrain' will... no, all that should need to be done is sorting everything
-// in the state. So if these buttons are clicked, that's all that needs to be done.
-// 2 seperate functions to handle each of those cases?
-
 import { React, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import { Row, Col } from "react-bootstrap";
