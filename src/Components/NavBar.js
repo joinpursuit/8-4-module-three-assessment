@@ -23,11 +23,6 @@ const NavBar = () => {
 					</Link>
 				</li>
 				<li>
-					<Link to='/' onClick={() => changeColor('azure')}>
-						Home
-					</Link>
-				</li>
-				<li>
 					<Link to='/movies' onClick={() => changeColor('lightblue')}>
 						Movies
 					</Link>
