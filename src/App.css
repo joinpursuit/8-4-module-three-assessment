@@ -1,6 +1,14 @@
 
-
 .app {
   text-align: center;
 }
 
+.nav {
+  background-color: grey;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 0 1rem;
+}
