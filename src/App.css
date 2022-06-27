@@ -3,4 +3,37 @@
 .app {
   text-align: center;
 }
+.hometitle{
+  grid-area: t;
+  text-align: center;
+  display:flex;
+  justify-content: center;
+}
+.grid{
+  display: grid;
+  grid-template-areas:
+  "n n n n"
+  "t t t t"
+  "a a a a"
+  "a a a a"
+}
 
+.Nav {
+grid-area: n;
+text-align: center;
+display: flex;
+display: inline-block;
+margin:1px 0 0 5px;
+flex-grow: 1;
+height:100px;    
+background-color: aquamarine;
+}
+
+nav> a  {
+  margin: 1rem;  
+}
+
+.App-logo{
+  height:50px;
+  width: 50px;
+}
