@@ -20,7 +20,7 @@ export default function LocationsToggle() {
 
 
   return (
-    <div>
+    <div className='locations'>
       <h1>List of Locations</h1>
       <button type="submit" onClick={()=>{setButtonText(!buttonText); handleClick()}}>{buttonText ? "Hide Locations" : "Show Locations"}</button>
 

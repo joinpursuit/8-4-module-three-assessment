@@ -21,7 +21,7 @@ const handleSelect = (event) => {
 }
 
   return (
-    <div>
+    <div className='movies'>
       <h1>Select a Movie</h1>
       <select onChange={handleSelect} value={select}>
         <option></option>

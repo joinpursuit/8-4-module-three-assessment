@@ -20,7 +20,7 @@ export default function PeopleSearch() {
   }
 
   return (
-    <div>
+    <div className='people'>
       <h1>Search for a Person</h1>
       <form onSubmit={handleSubmit}>
       <input onChange={(e) => setInput(e.target.value)} value={input} type="text"/>
