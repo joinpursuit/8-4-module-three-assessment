@@ -21,6 +21,7 @@ export const Locations = () => {
 
   const handleTerrain = () => {
     // sorting by terrain
+    // pass in callback, and spread - this makes the sort update the state properly
     setLocations((prev) =>
       [...prev].sort((a, b) => {
         let terrainA = a.terrain.toLowerCase();
