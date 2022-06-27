@@ -1,6 +1,32 @@
-
-
 .app {
   text-align: center;
 }
 
+.homepage {
+  text-align: center;
+}
+
+.navbar {
+  text-align: center;
+background-color: teal;
+text-decoration-color: aliceblue;
+}
+
+.movies {
+  text-align: center;
+  background-color: aquamarine;
+}
+
+.people {
+  text-align: center;
+  background-color: bisque;
+}
+.location {
+  text-align: center;
+  background-color: lightcoral;
+}
+.locationList {
+  background-color: blueviolet;
+  display: grid;
+  grid-template-rows: 1fr, 1fr, 1fr;
+}
