@@ -1,6 +1,27 @@
-
-
-.app {
-  text-align: center;
+html, body {
+  height: 100%;
 }
 
+.App {
+  align-items: center;
+  text-align: center;
+  font-family: Futura;
+  display: flex;
+  align-items: flex-start;
+  background-color: #f7f7f7;
+}
+
+.App a:hover {
+  color: #9cafa9;
+}
+
+.appMain {
+display: flex;
+background-color: #f7f7f7;
+border-color: black;
+border-style: solid black;
+width: 100%;
+overflow-x: hidden;
+overflow-y: scroll;
+text-align: center;
+}

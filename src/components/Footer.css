@@ -1,0 +1,14 @@
+.fixed-footer {
+  font-family: "Roboto", monospaced;
+  float: left;
+  position: bottom absolute;
+  background-color: #f7f7f7;
+  text-align: center;
+  width: 200px;
+  color: #9cafa9;
+}
+
+.fixed-footer h4:hover {
+  color: #9cafa9;
+  cursor: pointer;
+}
