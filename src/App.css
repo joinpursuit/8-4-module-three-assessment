@@ -13,3 +13,17 @@
   gap: 2rem;
   padding: 0 1rem;
 }
+
+li {
+  list-style: none;
+  border: 1px black solid;
+}
+
+ul{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.hide{
+  display: none;
+}

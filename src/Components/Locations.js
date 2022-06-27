@@ -101,7 +101,7 @@ export default function Locations() {
           <button onClick={sortTerrain}>SORT BY TERRAIN</button>
         </div>
       ) : (
-        <p></p>
+        <p className="hide"></p>
       )}
 
       <ul>
@@ -110,7 +110,7 @@ export default function Locations() {
             return <Location location={location} />;
           })
         ) : (
-          <p></p>
+          <p className="hide"></p>
         )}
 
         {showButton === "Hide Locations" && name === true ? (
@@ -118,7 +118,7 @@ export default function Locations() {
             return <Location location={location} />;
           })
         ) : (
-          <p></p>
+          <p className="hide"></p>
         )}
 
         {showButton === "Hide Locations" && climate === true ? (
@@ -126,7 +126,7 @@ export default function Locations() {
             return <Location location={location} />;
           })
         ) : (
-          <p></p>
+          <p className="hide"></p>
         )}
 
         {showButton === "Hide Locations" && terrain === true ? (
@@ -134,7 +134,7 @@ export default function Locations() {
             return <Location location={location} />;
           })
         ) : (
-          <p></p>
+          <p className="hide"></p>
         )}
       </ul>
     </div>
