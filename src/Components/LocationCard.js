@@ -1,13 +1,15 @@
-import React from 'react'
+import React from "react";
 
-export default function LocationCard({location}) {
+export default function LocationCard({ location }) {
   return (
-    <div className='locations'>
+    <ul className="locations">
       <ul>
-        <li>Name: {location.name}</li>
-        <li>Climate: {location.climate}</li>
-        <li>Terrain: {location.terrain}</li>
+        <li>
+          <span>Name: {location.name} </span>
+          <span>Climate: {location.climate} </span>
+          <span>Terrain: {location.terrain} </span>
+        </li>
       </ul>
-    </div>
-  )
+    </ul>
+  );
 }
