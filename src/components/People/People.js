@@ -5,7 +5,7 @@ import "./People.css";
 const People = () => {
   const [people, setPeople] = useState([]);
   const [search, setSearch] = useState('');
-  const [actors, setActors] = useState([]);
+  const [actorsFound, setActorsFound] = useState([]);
   const [notFound, setNotFound] = useState("");
 
   useEffect(() => {
@@ -18,10 +18,10 @@ const People = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     // setSearch(event.target.value)
-    setActors(people.filter((person) => {
+    setActorsFound(people.filter((person) => {
       return (person.name.toUpperCase() === search.toUpperCase())
     }))
-    if (actors.length > 1) {
+    if (actorsFound.length > 1) {
       setNotFound("Not Found");
     }
     setSearch("")
@@ -45,7 +45,7 @@ const People = () => {
           <input className="inp" type="text"   value={search} onChange={handleChange} placeholder="Search a Person"/>
           <button className="btn" type="submit">SUBMIT</button>
         </form>
-        {actors.length > 0 ? (<PeoplePage actors={actors}/>) : (<h1>{notFound}</h1>)}
+        {actorsFound.length > 0 ? (<PeoplePage actorsFound={actorsFound}/>) : (<h1>{notFound}</h1>)}
 
     </div>
   )
