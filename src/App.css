@@ -1,10 +1,11 @@
 
 .app {
   text-align: center;
+  margin: 10px;
 }
 
 .nav {
-  background-color: grey;
+  background-color: #89CFF0;
   color: black;
   display: flex;
   justify-content: space-between;

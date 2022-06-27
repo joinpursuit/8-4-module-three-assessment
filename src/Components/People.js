@@ -4,8 +4,8 @@ import Person from "./Person";
 export default function People() {
   const [peopleData, setPeopleData] = useState([]);
   const [input, setInput] = useState("");
-  const [human, setHuman] =useState([])
-
+  const [human, setHuman] = useState([])
+  const [notFound, setNotFound] = useState("")
 
   useEffect(() => {
     fetch("https://ghibliapi.herokuapp.com/people/")
@@ -26,6 +26,9 @@ export default function People() {
     setHuman(peopleData.filter((person) => {
         return (person.name.toLowerCase() === input.toLowerCase())
     }))
+    if(human.length < 1){
+      setNotFound("Not Found")
+    }
   }
 
   return (
@@ -35,7 +38,7 @@ export default function People() {
         <input type="text" value={input} onChange={handleChange}></input>
         <button>Submit</button>
     </form>
-    {human.length > 0 ? (<Person human={human}/>) : (<h2>Not Found</h2>)}
+    {human.length > 0 ? (<Person human={human}/>) : (<h2>{notFound}</h2>)}
   </div>
   );
 }

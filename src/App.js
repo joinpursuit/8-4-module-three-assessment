@@ -11,7 +11,7 @@ import Locations from "./Components/Locations";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Router>
         <Nav />
         <Routes>
