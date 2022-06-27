@@ -1,0 +1,11 @@
+.locations{
+display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #962375;
+    padding: 10px;
+    text-decoration: none;
+}
+button{
+    width: 150px;
+    height: 20px;
+}
