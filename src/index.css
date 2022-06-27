@@ -1,13 +1,119 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 25px;
+  grid-template-areas:
+    "header"
+    "main ";
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.header {
+  grid-area: header;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  grid-area: main;
+}
+
+.home {
+  text-align: center;
+}
+
+.logo {
+  height: 50px;
+}
+
+.navbar {
+  background-color: #255C99;
+  padding-bottom: 5px;
+}
+
+.navbar ul {
+  justify-content: center;
+  display: flex;
+}
+
+.navbar ul li {
+  display: inline-block;
+}
+
+.navbar li {
+  display: inline-flex;
+  text-decoration: none;
+  margin-left: 100px;
+}
+
+.navbar li a {
+  color: white;
+  text-decoration: none;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+select {
+  padding: 5px;
+}
+
+input {
+  padding: 5px;
+}
+
+button {
+  padding: 5px;
+}
+
+.movies {
+  background-color: #7EA3CC;
+  margin: 0px 25px;
+  text-align: center;
+  padding: 15px;
+}
+
+.people {
+  background-color: #7EA3CC;
+  margin: 0px 25px;
+  text-align: center;
+  padding: 15px;
+}
+
+.locations {
+  background-color: #7EA3CC;
+  margin: 0px 25px;
+  padding: 15px;
+
+}
+
+.locations h1 {
+  text-align: center;
+}
+
+.locations-btn {
+  text-align: center;
+}
+
+.locations>ul {
+  background-color: aliceblue;
+  list-style-type: none;
+  display: inline-flex;
+  text-align: left;
+  width: 285px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.locations li {
+  padding: 15px;
+}
+
+.item {
+  background-color: aliceblue;
+  margin: 10px;
+  padding: 10px;
+}
+
+.warning {
+  color: #FF0000;
 }
