@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react'
+import "./MovieSearch.css"
 
 export default function MovieSearch() {
 
 const [movies, setMovies] = useState([])
 const [select, setSelect] = useState("")
-const [movieInfo, setMovieInfo] = useState("")
 
 useEffect(()=>{
   fetch(
@@ -22,7 +22,7 @@ const handleSelect = (event) => {
 
   return (
     <div>
-      <h2>Select a Movie</h2>
+      <h1>Select a Movie</h1>
       <select onChange={handleSelect} value={select}>
         <option></option>
         {movies.map(movie =>{
@@ -31,12 +31,12 @@ const handleSelect = (event) => {
           )
         })}
       </select>
-      <p>
+      <div>
      { 
   movies.map(movie => {
     if(movie.title === select){
       return (
-        <div>
+        <div className='movieInfo'>
        <h2>Title: {movie.title}</h2>
        <h4>Release Date: {movie["release_date"]}</h4>
        <h4>Description: {movie.description}</h4>
@@ -46,7 +46,7 @@ const handleSelect = (event) => {
     }
   })
 }
-      </p>
+      </div>
     </div>
   )
 }
