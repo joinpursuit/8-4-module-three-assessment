@@ -1,0 +1,16 @@
+if(movie.title === title){
+return <MovieCard films = {films}>
+}
+
+
+
+const showPerson = people.find((person) => person.name === search)
+
+{showPerson? <PersonCard showPerson= {showPerson}/> : null}
+
+
+
+ const person = people.find((person) => person.name.toLowerCase() === input.toLowerCase)
+if(!person){
+  return <Error/>
+}
