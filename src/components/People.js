@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { getAllPersons } from "../apis/apis";
 
 const People = () => {
-  const [people, setPeple] = useState([]);
+  const [people, setPeople] = useState([]);
   const [search, setSearch] = useState("");
   const [results, setResults] = useState([]);
 
   useEffect(() => {
     getAllPersons().then((people) => {
-      setPeple(people);
+      setPeople(people);
     });
   }, []);
 
