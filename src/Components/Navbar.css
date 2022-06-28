@@ -1,0 +1,11 @@
+.navbar{
+    background-color: lavender;
+    display: flex;
+    flex-direction: row;
+}
+h1 {
+    color: black;
+}
+.navlink {
+    padding: 25px;
+}
