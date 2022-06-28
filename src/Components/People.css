@@ -1,0 +1,45 @@
+
+
+h1 {
+text-align: left;
+}
+
+button {
+    background-color:rgb(220, 229, 234);
+    opacity: 40;
+    font-family: sans-serif;
+    margin-top: 4px; 
+    margin:auto;
+    display:flex;
+    justify-content: center; 
+    text-align: center;
+}
+
+form {  
+    margin-left: 43%;
+    margin-right:15%;
+    width: 17%;
+}
+
+input {
+    font-family: sans-serif;
+    background-color: whitesmoke;
+}
+
+.attributes {
+    font-size: larger;
+    text-align: center;
+}
+
+p {
+    font-size: x-large;
+    font-family:sans-serif;
+    border-radius: 6px;
+    padding:1.2em 20px;
+    text-align: center;
+    text-align: left;
+    position:sticky;
+    width:50%;
+    margin:5px auto;
+    background-color: rgb(247, 223, 171);
+}
