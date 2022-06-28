@@ -1,0 +1,29 @@
+body {
+    margin: auto;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 0;
+}
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color: indianred;
+  }
+.navbar {
+    display: flex;
+    grid-template-columns: auto auto auto auto;
+    background-color: #300879;
+    padding: 5px;
+    text-decoration: none;
+  }
+  .navbar div {
+    text-decoration: none;
+    text-align: center;
+    padding:10px;
+    font-size: 20px;
+  }
+
+
