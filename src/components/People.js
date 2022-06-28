@@ -7,8 +7,8 @@ const People = () => {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
-    getAllPersons().then((poeple) => {
-      setPeple(poeple);
+    getAllPersons().then((people) => {
+      setPeple(people);
     });
   }, []);
 
