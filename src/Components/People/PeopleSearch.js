@@ -5,6 +5,7 @@ export default function PeopleSearch() {
 
   const [input, setInput] = useState("")
   const [people, setPeople] = useState([])
+  const [foundPerson, setFoundPerson] = useState()
 
   useEffect(()=> {
     fetch(
@@ -16,8 +17,11 @@ export default function PeopleSearch() {
 
   const handleSubmit = (event) => {
     event.preventDefault()
+    const person = people.find((person) => person.name.toLowerCase() === input.toLowerCase())
+    setFoundPerson(person)
     setInput("")
   }
+
 
   return (
     <div className='people'>
@@ -27,17 +31,11 @@ export default function PeopleSearch() {
       <button type="submit">Submit</button>
       </form>
       <p>
-        {people.map((person)=>{
-          if(person.name.toLowerCase() === input.toLowerCase()){
-            return (
-              <div className='peopleInfo'>
-                <h2>Name: {person.name}</h2>
-                <h4>Age: {person.age}</h4>
-                <h4>Gender: {person.gender}</h4>
-              </div>
-            )
-          }
-        })}
+        {foundPerson ? <div className='peopleInfo'>
+                <h2>Name: {foundPerson.name}</h2>
+                <h4>Age: {foundPerson.age}</h4>
+                <h4>Eye Color: {foundPerson["eye_color"]}</h4>
+              </div> : <div><p>Not Found</p></div>}
       </p>
     </div>
   )
