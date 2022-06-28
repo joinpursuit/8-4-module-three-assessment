@@ -5,6 +5,7 @@ export default function LocationsToggle() {
 
   const [locations, setLocations] = useState([])
   const [toggle, setToggle] = useState(true)
+  const [byName, setByName] = useState([])
 
   useEffect(()=>{
     fetch(
@@ -14,6 +15,18 @@ export default function LocationsToggle() {
     .then((data) => setLocations(data))
   }, [])
 
+  const handleClick = (event) => {
+    setByName(locations.sort((a,b)=>{
+      if(a.name.toLowerCase() < b.name.toLowerCase()){
+        return -1;
+      }
+      if(a.name.toLowerCase() > b.name.toLowerCase()){
+        return 1;
+      }
+      return 0; 
+    }))
+  }
+
 
   return (
     <div className='locations'>
@@ -21,11 +34,17 @@ export default function LocationsToggle() {
       <button type="submit" onClick={()=>{setToggle(!toggle)}}>{!toggle ? "Show Locations" : "Hide Locations"}</button>
 
       {toggle ?  <div>
-        <button>Sort by Name</button>
+        <button onClick={()=> {handleClick(); byName.map((locationByName) => {
+      return (<ul>
+            <li><span>Name:<span>{locationByName.name}</span></span></li>
+            <li><span>Climate:<span>{locationByName.climate}</span></span></li>
+            <li><span>Terrain:<span>{locationByName.terrain}</span></span></li>
+        </ul>)
+    })}}>Sort by Name</button>
         <button>Sort by Climate</button>
         <button>Sort by Terrain</button>
-      </div> : null}
-      
+      </div>  : null}
+        <ul>
       {locations.map((location)=> toggle ? <ul>
               <li>
                   <h2>Name: {location.name}</h2>
@@ -33,6 +52,7 @@ export default function LocationsToggle() {
                   <h4>Terrain: {location.terrain}</h4>
               </li>
               </ul> : null)}
+        </ul>
         
     </div>
   )
