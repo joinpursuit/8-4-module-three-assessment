@@ -1,0 +1,24 @@
+
+.moviecard {
+    font-family:sans-serif;
+    font-size: x-large;
+    width:100%;
+    text-align: left;
+    padding:1.2em 40px 1.2em 40px;
+    margin:25px auto;
+    border-radius: 10px;
+}
+
+div {
+    background-color:rgba(245, 245, 245, 0.856);
+    font-family: sans-serif;
+}
+
+h4, h5 {
+    text-align: center;
+}
+
+h3 {
+    font-size: x-large;
+    font-family: sans-serif;
+}

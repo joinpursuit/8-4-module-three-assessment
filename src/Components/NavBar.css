@@ -1,0 +1,29 @@
+logo { 
+display:grid
+
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+a {
+    display: grid;
+    grid-template-rows: 25px;
+    font-family: sans-serif;
+    align-items: center;
+
+}
+
+nav, .a {
+    display: grid;
+    grid-template-rows: 250px;
+    justify-content: left;
+    column-gap: 25px;
+    align-items: center;
+}
+
+.linklist {
+    background-color: lightyellow;
+    list-style-type: none;
+}
