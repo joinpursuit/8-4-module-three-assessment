@@ -2,17 +2,17 @@ import React, { useEffect, useState } from "react";
 import "./Locations.css";
 import ShowByContainer from "./ShowByContainer";
 
-function LocationsList({}) {
-  const [locations, setLocations] = useState([]);
+function LocationsList() {
+  // const [locations, setLocations] = useState([]);
   const [showAll, setShowAll] = useState(false);
 
-  useEffect(() => {
-    fetch(`https://ghibliapi.herokuapp.com/locations`)
-      .then((response) => response.json())
-      .then((data) => setLocations(data))
-      .catch((err) => console.log(err));
-  }, []);
-  console.log(locations);
+  // useEffect(() => {
+  //   fetch(`https://ghibliapi.herokuapp.com/locations`)
+  //     .then((response) => response.json())
+  //     .then((data) => setLocations(data))
+  //     .catch((err) => console.log(err));
+  // }, []);
+  // console.log(locations);
 
   return (
     <section className="locations">
@@ -26,7 +26,14 @@ function LocationsList({}) {
         {!showAll ? "Show Locations" : "Hide Locations"}
       </button>
       <section className="allLocations">
-        <div>{showAll ? <ShowByContainer locations={locations} setLocations={setLocations} /> : null}</div>
+        <div>
+          {showAll ? (
+            <ShowByContainer
+              // locations={locations}
+              // setLocations={setLocations}
+            />
+          ) : null}
+        </div>
       </section>
     </section>
   );

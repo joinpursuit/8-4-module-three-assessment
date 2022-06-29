@@ -18,11 +18,12 @@ header, footer {
 }
 
 main { 
-  min-height: 80vh;
-  /* min-width: 60%; */
-  display:flex;
-  text-align: center;
- 
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 68vh;
+  justify-content: space-between;
+  width: 97%;
+  margin: auto;
 }
 footer {
   text-align: center;

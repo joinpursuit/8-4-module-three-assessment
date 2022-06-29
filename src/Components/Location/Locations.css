@@ -1,18 +1,20 @@
 .locations {
-    display:block;
-  /* flex-direction: row; */
-  justify-content: stretch;
-  align-content: space-between;
-    background-color: rgb(205, 210, 211);
+
+
+  /* justify-content: stretch; */
+  /* align-content: space-between; */
+    /* background-color: rgb(205, 210, 211); */
 }
 .location-display {
-    display:flex;
-    flex-direction: column;
+    /* display:flex; */
+    background-color: rgb(157, 194, 201);
     min-height: 10vh;
+    text-align: left;
     align-content: center;
     list-style: none;
     justify-content: space-around ;
-    border: 1px solid;
+    border: 0.5px dotted rgb(87, 144, 156);
+    border-radius: 7px;
    
  
 }

@@ -1,8 +1,9 @@
 import React from 'react';
+import "./Nav.css"
 
 function Home() {
   return (
-    <div>Welcome to GhibliApp</div>
+    <div className="home">Welcome to GhibliApp</div>
   )
 }
 

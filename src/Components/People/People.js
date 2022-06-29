@@ -17,7 +17,7 @@ function People() {
   const searchedPerson = people.find(person => person.name.toLowerCase() === input)
   const handleSubmit = (e) => {
     e.preventDefault();
-   setInput(e.target.value)
+   setInput("")
   }
 
 
@@ -25,8 +25,10 @@ function People() {
     <div className="people">
       <h1>Search for a Person</h1>
       <form onSubmit={ handleSubmit } className="form__container">
-        <input onChange={(e) => setInput(e.target.value)} type="text" ></input>
-        <button>Submit</button>
+      <label htmlFor="type">
+        <input onChange={(e) => setInput(e.target.value)} type="text" />
+        </label>
+          <input type="submit" />
       </form>
       <PersonCard searchedPerson={searchedPerson}/>
     </div>

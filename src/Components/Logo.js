@@ -1,12 +1,13 @@
 import React from 'react';
+import "./Nav.css";
 import logo from "./logo.png";
 
 function Logo() {
-    const logo = "./logo.png";
+    const img = logo;
   return (
-    <div>
-        <h1>
-            <img src={ logo } /></h1>
+    <div className="logo">
+   
+            <img src={ img } alt="logo"/>
 
     </div>
   )
