@@ -14,19 +14,16 @@ function Movies() {
     }, []);
 
     const selectFilm = (event) => {
-        console.log(event.target.value)
         filmSelection = films.find((films) => films.id === event.target.value);
-        console.log(filmSelection);
         setfilmSelection(filmSelection);
         setfilmSelector(true);
     }
 
     console.log(filmSelection);
     return (
-        <div>
-            <div className="hometitle">
+        <div className="hometitle">
+            <div>
                 <h2>Select a Movies</h2>
-
                 <select onChange={(event) => selectFilm(event)}>
                     <option value=""></option>
                     {films.map((film) => (
@@ -34,8 +31,9 @@ function Movies() {
                     ))}
                 </select>
             </div>
-            {filmSelector &&  (<div>
-                    <p>Movie-Title:{filmSelection.title}</p>
+            {filmSelector &&  (
+            <div className="movs">
+                    <p><strong>Movie-Title:</strong>{filmSelection.title}</p>
                     <p>Movie-ReleaseDate:{filmSelection.release_date}</p>
                     <p>Movie-Description:{filmSelection.description}</p>
             </div>)}
