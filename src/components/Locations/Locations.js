@@ -23,7 +23,7 @@ const Locations = () => {
     <div className="locations">
 
         <h1>List of Locations</h1>
-        <button onClick={() => {setShowLocation(!showLocation)}}>{!showLocation ? "SHOW LOCATIONS": "HIDE LOCATIONS"}</button>
+        <button onClick={() => {setShowLocation(!showLocation)}}>{!showLocation ? "Show Locations": "Hide Locations"}</button>
         <p>{showLocation ? <LocationsPage locations={locations} setLocations={setLocations}/> : null}</p>
 
     </div>

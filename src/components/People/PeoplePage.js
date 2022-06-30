@@ -26,3 +26,4 @@ const PeoplePage = ({ actorsFound }) => {
 }
 
 export default PeoplePage;
+// ------
