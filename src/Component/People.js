@@ -18,28 +18,30 @@ function People() {
 
   const onSubmit = () => {
     peopleSelection = people.find((peoples) => peoples.name.toLowerCase() === peopleInput.toLowerCase());
-    if (peopleSelection && Object.keys(peopleSelection).length) {
+    if (peopleSelection  && Object.keys(peopleSelection).length) {//this mean that if input is invalid, do not return anything
       setPeopleSelection(peopleSelection);
-    } else {
+    }
+    else {
       setPeopleSelection({});
     }
-
+   
     setPeopleInput('')
     setPeopleSelector(true)
   }
+  console.log(peopleSelection);
   return (
-    <div className="hometitle">
-      <div >
+    <div>
+      <div className="hometitle">
         <h2>Search for a Person</h2>
         <input type="text" value={peopleInput} onChange={(event) => setPeopleInput(event.target.value)}></input>
         <button onClick={onSubmit}>Submit</button>
       </div>
       {peopleSelector && (
         (Object.keys(peopleSelection).length === 0)
-          ? (<div> 
+          ? (<div> {/*this if the input data exist then the name age and gender will be shown on the page */}
             <p> Not found</p>
           </div>)
-          : (<div> 
+          : (<div> {/*this if the input data exist then the name age and gender will be shown on the page */}
             <p>Name:{peopleSelection.name}</p>
             <p>Age:{peopleSelection.age}</p>
             <p>Gender:{peopleSelection.gender}</p>

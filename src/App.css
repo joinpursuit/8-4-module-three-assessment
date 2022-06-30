@@ -2,30 +2,21 @@
 
 .app {
   text-align: center;
-  background-color:rgb(203, 207, 220)
-
+}
+.hometitle{
+  grid-area: t;
+  text-align: center;
+  display:flex;
+  justify-content: center;
 }
 .grid{
   display: grid;
   grid-template-areas:
   "n n n n"
   "t t t t"
-  "t t t t";
-  
+  "a a a a"
+  "a a a a"
 }
-
-
-.hometitle{
-  grid-area: t;
-  text-align: center;
-  display: flex;
-  justify-content: flex-start;
-  align-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-}
-
-
 
 .Nav {
 grid-area: n;
@@ -45,11 +36,4 @@ nav> a  {
 .App-logo{
   height:50px;
   width: 50px;
-}
-
-.movs{
-  border-style: solid;
-  border-color: rgb(9, 9, 9);
-  border-width:.5px;
-  background-color:rgb(203, 207, 220) ;
 }
