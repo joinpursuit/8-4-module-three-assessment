@@ -79,9 +79,9 @@ const LocationsPage = ({ locations, setLocations }) => {
     }
   return (
     <div className='locations'>
-        <button onClick={sortedName}>SORT BY NAME</button>
-        <button onClick={sortedClimate}>SORT BY CLIMATE</button>
-        <button onClick={sortedTerrain}>SORT BY TERRAIN</button>
+        <button onClick={sortedName}>Sort by Name</button>
+        <button onClick={sortedClimate}>Sort by climate</button>
+        <button onClick={sortedTerrain}>Sort by Terrain</button>
         <section>
         <ul className='main-list'>
             {locations.map((location) => {

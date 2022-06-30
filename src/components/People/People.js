@@ -19,7 +19,7 @@ const People = () => {
     event.preventDefault();
     // setSearch(event.target.value)
     setActorsFound(people.filter((person) => {
-      return (person.name.toUpperCase() === search.toUpperCase())
+      return (person.name.toLowerCase() === search.toLowerCase())
     }))
     if (actorsFound.length > 1) {
       setNotFound("Not Found");
