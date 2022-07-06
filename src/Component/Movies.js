@@ -6,6 +6,7 @@ function Movies() {
     let [films, setFilms] = useState([])
     let [filmSelection, setfilmSelection] = useState({})
     let [filmSelector, setfilmSelector] = useState(false)
+
     useEffect(() => {
         fetch(`https://ghibliapi.herokuapp.com/films`)
             .then((data) => data.json())
@@ -14,30 +15,25 @@ function Movies() {
     }, []);
 
     const selectFilm = (event) => {
-        console.log(event.target.value)
         filmSelection = films.find((films) => films.id === event.target.value);
         console.log(filmSelection);
         setfilmSelection(filmSelection);
         setfilmSelector(true);
     }
-
     console.log(filmSelection);
     return (
-        <div>
+        <div className="movies">
             <div className="hometitle">
                 <h2>Select a Movies</h2>
-
                 <select onChange={(event) => selectFilm(event)}>
-                    <option value=""></option>
-                    {films.map((film) => (
-                        <option key={film.id} value={film.id}> {film.title}</option>
-                    ))}
+                  <option></option> 
+                    {films.map((film) => (<option key={film.id} value={film.id}> {film.title}</option> ))}
                 </select>
             </div>
             {filmSelector &&  (<div>
-                    <p>Movie-Title:{filmSelection.title}</p>
-                    <p>Movie-ReleaseDate:{filmSelection.release_date}</p>
-                    <p>Movie-Description:{filmSelection.description}</p>
+                    <h2>Movie Title:{filmSelection.title}</h2>
+                    <h3>Movie ReleaseDate:{filmSelection.release_date}</h3>
+                    <h4>Movie Description:{filmSelection.description}</h4>
             </div>)}
     </div>
     )
