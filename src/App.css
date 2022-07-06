@@ -3,4 +3,79 @@
 .app {
   text-align: center;
 }
+.home{
+  grid-area: t;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-direction: column;
+}
+.movies{
+  grid-area: t;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-direction: column;
+}
+.people{
+  grid-area: t;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+.uls{
+  grid-area: a;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
+.locations{
+  grid-area: t;
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: center;
+}
+.grid{
+  display: grid;
+  grid-template-areas:
+  "n n n n"
+  "t t t t"
+  "a a a a"
+  "a a a a"
+}
+
+.Nav {
+grid-area: n;
+text-align: center;
+display: flex;
+display: inline-block;
+margin:1px 0 0 5px;
+flex-grow: 1;
+height:100px;    
+background-color: aquamarine;
+}
+
+nav> a  {
+  margin: 1rem;  
+}
+
+.App-logo{
+  height:50px;
+  width: 50px;
+}
+.loc{
+  grid-area: a;
+  display: flex;
+}
