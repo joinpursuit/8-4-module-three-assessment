@@ -4,7 +4,7 @@ import "./Home.css"
 function Home() {
   return (
     <>
-        <h1>Welcome to GhilbiApp</h1>
+        <body>Welcome to GhilbiApp</body>
     </>
   )
 }

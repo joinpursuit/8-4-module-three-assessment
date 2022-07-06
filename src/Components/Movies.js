@@ -31,7 +31,7 @@ function Movies() {
       <h1>Select a Movie</h1>
       {/* handleChange EVENT will run on - select - onChange */}
       <select onChange={handleChange}>
-        <option>Movie Choice</option>
+        <option></option>
         {/* depending on the option chosen map through the movies list and display movie title  */}
         {movies.map((movie) => (
           <option key={movie.id} value={movie.id}>

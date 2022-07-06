@@ -6,9 +6,11 @@ import LocationsContainer from "./LocationsContainer";
 function Locations() {
 
   // create useState for locations list set to emy array 
-  // create useState for show more infor set to true - Show Button
-  const [locations, setLocations] = useState([]);
-  const [showMore, setShowMore] = useState(true);
+  // create useState for show or hide locations true - Show Button
+  const [locations, setLocations] = useState('');
+  const [showMore, setShowMore] = useState(false);
+  const [showBttn, setShowBttn] = useState(true);
+
 
 
     // fetch locations data from ghibliapi and set returned data to updated useState locations list - setLocations - w/ catch for any 404 errors
@@ -24,16 +26,21 @@ function Locations() {
     getLocations();
   }, []);
 
+  const handleClick = () => {
+    showMore ? setShowMore(false) : setShowMore(true);
+    showBttn ? setShowBttn(false) : setShowBttn(true);
+  };
+
   return (
     <div>
-      <h1>List of Locations</h1>
+      <h1 className="locations">List of Locations</h1>
       {/* if the show button has not been clicked display hide locations */}
-      <button id="show-button" onClick={() => {setShowMore(!showMore);}}>
-        {!showMore ? "HIDE LOCATIONS" : "SHOW LOCATIONS"}
+      <button id="show-button" onClick={handleClick}>
+      {showBttn ? "Show Locations" : "Hide Locations"}
       </button>
       {/* if show button is clicked display locations to the LocationsContainer Component */}
-      <p> {!showMore ? <LocationsContainer locations={locations}/> : null}</p>
-      
+      <p> {showMore ? locations.map((location) => <LocationsContainer location={location} />)
+        : null}</p>
     </div>
   );
 }

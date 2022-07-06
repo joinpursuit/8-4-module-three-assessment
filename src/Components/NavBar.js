@@ -15,6 +15,7 @@ function NavBar() {
             <Link to="/">
             <img src="../Ghibli.png" alt='Ghilbi App' width={50} height={50}/>
             </Link>
+            <Link to='/' id='homebttn'style={linkStyle} ><h2>Home</h2></Link>
             <h2>
                 <Link to="/movies" style={linkStyle} >Movies</Link>
             </h2>
