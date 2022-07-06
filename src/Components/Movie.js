@@ -15,11 +15,10 @@ const [movie, setMovie] = useState("")
 
   return (
     <div className='movie'> 
-        {}
         <section>
             <h2>Title: {movie.title}</h2>
-            <p>Release Date: {movie.release_date}</p>
-            <p>Description: {movie.description}</p>
+            <h3>Release Date: {movie.release_date}</h3>
+            <h4>Description: {movie.description}</h4>
         </section>
     </div>
   )

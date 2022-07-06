@@ -3,7 +3,7 @@ import Location from "./Location";
 
 export default function Locations() {
   const [locations, setLocations] = useState("");
-  const [showButton, setShowButton] = useState("Show Location");
+  const [showButton, setShowButton] = useState("Show Locations");
   const [nonSorted, setNonSorted] = useState(true);
   const [name, setName] = useState(false);
   const [climate, setClimate] = useState(false);
@@ -19,10 +19,10 @@ export default function Locations() {
 
   const handleClick = (e) => {
     e.preventDefault();
-    if (showButton === "Show Location") {
+    if (showButton === "Show Locations") {
       setShowButton("Hide Locations");
     } else {
-      setShowButton("Show Location");
+      setShowButton("Show Locations");
     }
   };
 
@@ -95,11 +95,11 @@ export default function Locations() {
       <h2>List of Locations</h2>
       <button onClick={handleClick}>{showButton}</button>
       {showButton === "Hide Locations" ? (
-        <div>
-          <button onClick={sortName}>SORT BY NAME</button>
-          <button onClick={sortClimate}>SORT BY CLIMATE</button>
-          <button onClick={sortTerrain}>SORT BY TERRAIN</button>
-        </div>
+        <ul>
+          <button onClick={sortName}>Sort by Name</button>
+          <button onClick={sortClimate}>Sort by Climate</button>
+          <button onClick={sortTerrain}>Sort by Terrain</button>
+        </ul>
       ) : (
         <p className="hide"></p>
       )}
