@@ -1,8 +1,10 @@
 import React from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import "./People.css";
 
-export default function People({ people, setPeople }) {
+export default function People() {
+
+  const [people, setPeople] = useState([]);
 
   useEffect(() => {
         fetch("https://ghibliapi.herokuapp.com/people")
@@ -15,15 +17,15 @@ export default function People({ people, setPeople }) {
           })
       }, [setPeople]);
 
-      const handleChange = (e) => {
-        setPeople(e.target.value)
-      }
+      // const handleChange = (e) => {
+      //   setPeople(e.target.value)
+      // }
 
   return (
     <div className='people'>
       <h1>Search for a Person</h1>
       <form>
-        <input value={ people } onChange={ handleChange }/>
+        <input value={ people }/>
         <button>Submit</button>
       </form>
     </div>

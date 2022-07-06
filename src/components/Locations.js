@@ -1,8 +1,11 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./Locations.css";
 
-export default function Locations({ location, setLocation }) {
+export default function Locations() {
+
+  const [location, setLocation] = useState([]);
+
   useEffect(() => {
     fetch("https://ghibliapi.herokuapp.com/locations")
       .then((response) => response.json())
