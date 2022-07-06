@@ -11,31 +11,34 @@ export default function People() {
         fetch("https://ghibliapi.herokuapp.com/people")
           .then((response) => response.json())
           .then((data) => {
-            setPeople(data.name)
+            setPeople(data)
           })
           .catch((error) => {
             console.log(error)
           })
       }, [setPeople]);
 
-      const handleChange = (e) => {
-        const name = e.target.value
-        const person = people.find((peeps) => peeps.name === name) || {};
-        setInput(person)
+      const handleSubmit = (e) => {
+        e.preventDefault()
       }
 
-      const personDescription = input.name ? (
+      const handleChange = (e) => {
+        e.preventDefault()
+        setInput(e.target.value)
+      }
+
+      const personDescription = input === people ? (
         <div>
-          <h2>Name: { input.name }</h2>
-          <h3>Age: { input.age }</h3>
-          <h3>Gender: { input.gender }</h3>
+          <h2>Name: { people.name }</h2>
+          {/* <h3>Age: { input.age }</h3>
+          <h3>Gender: { input.gender }</h3> */}
         </div>
       ) : null;
 
   return (
     <div className='people'>
       <h1>Search for a Person</h1>
-      <form>
+      <form onSubmit={ handleSubmit }>
         <input onChange={ handleChange }/>
         <button>Submit</button>
         <section>{ personDescription }</section>
@@ -43,7 +46,3 @@ export default function People() {
     </div>
   )
 }
-
-
-//Will need a map method in the return
-//Name, Age, Eye Color, Hair Color
