@@ -1,6 +1,35 @@
-
-
 .app {
+  /* min-height: 80vh;
+  min-width: 60%; */
+ justify-content: stretch;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+}
+
+.app-header {
+  display: flex;
+  /* justify-content: space-around; */
+  text-align: center;
+}
+header, footer {
+  padding: 1em;
+  background: rgb(45, 106, 120);
   text-align: center;
 }
 
+main { 
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 68vh;
+  justify-content: space-between;
+  width: 97%;
+  margin: auto;
+}
+footer {
+  text-align: center;
+  font-style: italic;
+  font-weight: 300;
+}
+* {
+  box-sizing: border-box
+}
