@@ -1,24 +1,41 @@
-import logo from "./logo.svg";
 import "./App.css";
+import Home from "./Components/Home";
+import NavBar from "./Components/NavBar";
+import Movies from "./Components/Movies";
+import People from "./Components/People";
+import Locations from "./Components/Locations";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
+  const [movies, setMovies] = useState([]);
+
+
+  // console.log data returns Array of 22 objects of movies
+  useEffect(() => {
+
+    fetch(
+  `https://ghibliapi.herokuapp.com/films`
+    )
+      .then((response) => response.json())
+      .then((data) => setMovies(data))
+
+  })
+  
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/people" element={<People />} />
+          <Route path="/locations" element={<Locations />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

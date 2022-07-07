@@ -1,0 +1,10 @@
+.locations{
+    text-align: center;
+    width: auto;
+    height: 50px;
+}
+
+.center{
+    display: block;
+    margin: 0 auto;
+}
