@@ -1,31 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
+export default function Movies() {
+  const [movies, setMovies] = useState([]);
+  const [selectedMovie, setSelectedMovie] = useState[{ id: null }];
 
-const Movies = ({ allGhibliFilms }) => {
-  const [allGhibliTitles, setAllGhibliTitles] = useState();
+  useEffect(() => {
+    fetch('https://ghibliapi.herokuapp.com/films')
+    .then((movieData) => movieData.json())
+    .then((movies) => setMovies(movies));
+  }, []);
 
-  const allTitles = allGhibliFilms.map((film) => {
-    return (
-      <option key={film.id} value={film.title}>
-        {film.title}
-      </option>
-    )
-  })
+    const handleChange = (e) => {
+      const id = e.target.value;
+      const selected = movies.find((movie) => movie.id === id);
+      setSelectedMovie(selected);
 
-  
+  };
 
   return (
-    <div className='movies'>
-        <h2>Select a Movie</h2>
-        <form>
-          <select>
-            <option value=''>
-            </option>
-            {allTitles}
-          </select>
-        </form>
-    </div>
+    <div>
+      <select onChange={handleChange}>
+        <option>Select A Movie</option>
+       {movies.map((movies) => (
+        <option value={movies.id} key={movies.id}>{movies.title}</option>
+       ))}  
+      </select>
+      {!selectedMovie.id ? (
+         <p>no movie selected</p>
+         ) : ( 
+          <aside>
+            <p> Title : {selectedMovie.title} </p>
+            <p> Description : {selectedMovie.desciption} </p>
+            <p> Release Date : {setSelectedMovie.release_date}</p>
+          </aside>
+  )}
+   </div>
   );
-};
+}
 
-export default Movies;
+
+
+

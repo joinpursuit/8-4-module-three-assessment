@@ -34,10 +34,6 @@ function App() {
           <Route path='/locations' element={<Locations/>} />
         </Routes>
       </Router>
-
-      
-      
-      
     </div>
   );
  
