@@ -3,9 +3,9 @@ import "./Home.css"
 
 function Home() {
   return (
-    <>
-        <body>Welcome to GhilbiApp</body>
-    </>
+    <div>
+        <h1>Welcome to GhibliApp</h1>
+    </div>
   )
 }
 

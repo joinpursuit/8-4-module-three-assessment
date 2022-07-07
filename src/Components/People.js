@@ -1,51 +1,53 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./People.css";
-// import the PeopleCard component created with People props
-import PeopleCard from "./PeopleCard";
 
-function People() {
-  // create a useState for list of people set to empty array
-  // create a useState for user input set to an empty string - input element
+
+export default function People() {
+  const [inputSearch, setInputSearch] = useState("");
+  const [searchPerson, setSearchPerson] = useState([]);
   const [people, setPeople] = useState([]);
-  const [input, setInput] = useState("");
-  const [foundPerson, setFoundPerson] = useState([])
 
-
-  // fetch people data from ghibliapi and set returned data to updated useState people list - setPeople - w/ catch for any 404 errors
   useEffect(() => {
-    fetch("https://ghibliapi.herokuapp.com/people")
+    fetch(`https://ghibliapi.herokuapp.com/people/`)
       .then((response) => response.json())
-      .then((data) => setPeople(data))
-      .catch((error) => console.log(error));
-  }, []);
+      .then((data) => setPeople(data));
+  });
 
-  
-  // create EVENT on handleSubmit that wont refresh the page  - when updated useState for user input value changes - setInput
-  const handleChange = (e) => {
-    e.preventDefault();
-    setInput(e.target.value);
+  const handleClick = (event) => {
+    event.preventDefault();
+    setSearchPerson(people.find((person) => person.name.toLowerCase() === inputSearch.toLowerCase()));
+    console.log(searchPerson);
+    setInputSearch("");
   };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setFoundPerson(people.filter(person => person.name.toUpperCase() === input.toUpperCase()))
-  }
-
-
-  console.log(foundPerson);
   return (
-    <div>
-      <h1 className="people">Search for a Person</h1>
-      {/* handleSumbit EVENT will run on - form - onSubmit */}
-      <form onSubmit={handleSubmit}>
-        {/* depending on the user input update the useState with new value  */}
-        <input onChange={handleChange} type="text" value={input} ></input>
-        <button>Submit</button>
+    <section className="people">
+      <form onClick={handleClick}>
+        <h2>Search for a Person</h2>
+        <input
+          onChange={(event) => setInputSearch(event.target.value)}
+          value={inputSearch}
+          type="text"
+        ></input>
+        <button>SUBMIT</button>
       </form>
-      {/* transfer that person searched by the user to the PeopleCard Component */}
-      { foundPerson.length > 0 ? (<PeopleCard foundPerson={foundPerson}/>) : (<h1>Not Found</h1>)}
-    </div>
+      {searchPerson ? (
+        <>
+          <h2>Name: {searchPerson.name}</h2>
+          <p>
+            <strong>Age: </strong>
+            {searchPerson.age}
+          </p>
+          <p>
+            <strong>Eye Color: </strong> {searchPerson.eye_color}{" "}
+          </p>
+          <p>
+            <strong>Hair Color: </strong>
+            {searchPerson.hair_color}
+          </p>
+        </>
+      ) : (
+        "Not Found"
+      )}
+    </section>
   );
 }
-
-export default People;
