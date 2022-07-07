@@ -45,7 +45,7 @@ const People = () => {
           <input className="inp" type="text"   value={search} onChange={handleChange} placeholder="Search a Person"/>
           <button className="btn" type="submit">SUBMIT</button>
         </form>
-        {actorsFound.length > 0 ? (<PeoplePage actorsFound={actorsFound}/>) : (<h1>{notFound}</h1>)}
+        {actorsFound.length > 0 ? (<PeoplePage actorsFound={actorsFound}/>) : (<h1>Not Found</h1>)}
 
     </div>
   )
