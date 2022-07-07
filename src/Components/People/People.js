@@ -3,9 +3,8 @@ import "./People.css";
 import PersonCard from "./PersonCard";
 
 function People() {
-
   const [people, setPeople] = useState([]);
-  const [input, setInput] = useState("");
+  const [searchPerson, setSearchPerson] = useState({ id: null });
 
   useEffect(() => {
     fetch("https://ghibliapi.herokuapp.com/people")
@@ -14,23 +13,36 @@ function People() {
       .catch((error) => console.log(error));
   }, []);
 
-  const searchedPerson = people.find(person => person.name.toLowerCase() === input)
   const handleSubmit = (e) => {
     e.preventDefault();
-   setInput("")
-  }
-
+    const form = e.target;
+    const name = form.search.value.toLowerCase();
+    const searchedPerson = people.find(
+      ((person) => {
+        return person.name.toLowerCase() === name;
+      }) || { id: null }
+    );
+    setSearchPerson(searchedPerson);
+    form.reset();
+   
+  };
 
   return (
     <div className="people">
       <h1>Search for a Person</h1>
-      <form onSubmit={ handleSubmit } className="form__container">
-      <label htmlFor="type">
-        <input onChange={(e) => setInput(e.target.value)} type="text" />
-        </label>
-          <input type="submit" />
+      <form onSubmit={handleSubmit} className="form__container">
+        <input id="name" name="search" type="text" />
+        <button type="submit">search person</button>
       </form>
-      <PersonCard searchedPerson={searchedPerson}/>
+      <aside>
+        {!searchPerson.id ? (
+          <p>Please enter a person's name!</p>
+        ) : (
+          <>
+            <PersonCard searchPerson={searchPerson} />
+          </>
+        )}
+      </aside>
     </div>
   );
 }

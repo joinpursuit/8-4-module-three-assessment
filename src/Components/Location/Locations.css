@@ -1,9 +1,11 @@
 .locations {
-
-
-  /* justify-content: stretch; */
-  /* align-content: space-between; */
-    /* background-color: rgb(205, 210, 211); */
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    box-shadow: 2px 2px 4px darkgrey;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .location-display {
     /* display:flex; */
@@ -15,12 +17,16 @@
     justify-content: space-around ;
     border: 0.5px dotted rgb(87, 144, 156);
     border-radius: 7px;
-   
- 
 }
-.sort {
-    justify-content: space-between;
-    align-content: space-between;
+ul li {
+    list-style: none;
+}
+.label {
+    font-weight: bold;
+}
+.result {
+    font-style: italic;
+    margin-left: 10px;
 }
 button {
     top: 50%;

@@ -1,24 +1,26 @@
-import React from 'react'
-import "./PersonCard.css";
+import React from "react";
+import "./People.css";
 
-function PersonCard({ searchedPerson }) {
-
-  if(!searchedPerson) {
-    return(
-      <div className="person-input">
-        <p>Please enter a person's name!</p>
-      </div>
-    )
-  }  
+function PersonCard({ searchPerson }) {
+ 
   return (
-    <div className="person-details">
-      <h1>Name: {searchedPerson.name}</h1>
-      <p><strong>Age: </strong>{searchedPerson.age}</p>
-      <p><strong>Eye Color: </strong>{searchedPerson.eye_color}</p>
-      <p><strong>Hair Color: </strong>{searchedPerson.hair_color}</p>
+    <>
+      <aside className="person-details">
+        <h1>Name:   {searchPerson.name}</h1>
+     
+        <span className="label">Age: </span>
+        <span className="result">{searchPerson.age} </span>     
       
-    </div>
-  )
+
+        <span className="label">Eye Color: </span>
+        <span className="result"> {searchPerson.eye_color} </span>
+ 
+        <span className="label">Hair Color: </span>
+        <span className="result"> {searchPerson.hair_color} </span>
+ 
+      </aside>
+    </>
+  );
 }
 
 export default PersonCard;

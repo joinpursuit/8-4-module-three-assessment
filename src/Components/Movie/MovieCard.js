@@ -1,5 +1,5 @@
 import React from 'react';
-import "./MovieCard.css";
+import "./Movies.css";
 
 function MovieCard({ option, movies }) {
   const selectedMovie = movies.find((movie) => movie.id === option)
@@ -14,8 +14,15 @@ function MovieCard({ option, movies }) {
   return (
     <div className="movie-details">
       <h1>Title: {selectedMovie.title}</h1>
-      <p><strong>Release Date: </strong>{selectedMovie.release_date}</p>
-      <p><strong>Description: </strong>{selectedMovie.description}</p>
+      <p>
+      <span className="label">Release Date: </span>
+      <span className="result"> {selectedMovie.release_date} </span>
+      </p>
+      <p>
+      <span className="label">Description: </span>
+      <span className="result"> {selectedMovie.description} </span>
+      </p>
+
     </div>
   )
 }

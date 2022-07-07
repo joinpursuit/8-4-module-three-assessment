@@ -1,6 +1,10 @@
-/* .movies {
-    min-height: 80vh;
-  
+.movies {
+    width: 100%;
+    background-color: rgb(210, 233, 233);
     text-align: center;
-    background-color: rgb(148, 221, 234);
-} */
+    margin-top: 1em;
+    margin-bottom: 1em;
+    box-shadow: 2px 2px 4px darkgrey;
+    align-items: center;
+    flex-wrap: wrap;
+}

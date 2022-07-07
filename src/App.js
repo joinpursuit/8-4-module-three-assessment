@@ -4,8 +4,9 @@ import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
 import Movies from "./Components/Movie/Movies";
 import People from "./Components/People/People";
-import LocationsList from "./Components/Location/LocationsList";
+// import ShowByContainer from "./Components/Location/ShowByContainer";
 import "./App.css"
+import LocationsList from "./Components/Location/LocationsList";
 
 function App() {
   return (
