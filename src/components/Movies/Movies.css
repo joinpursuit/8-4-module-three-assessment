@@ -1,0 +1,40 @@
+.movies {
+    /* display: flex; */
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding-bottom: 30rem;
+    /* border: 1px solid grey; */
+    background-color: aquamarine;
+    text-align: center;
+
+}
+
+.movies > h1, select {
+    /* display: flex; */
+    /* align-items: center; */
+    /* margin-left: 700px; */
+    /* margin-right: 700px; */
+    /* text-align: center; */
+}
+
+.opt {
+    padding: 5px;
+}
+.movies-display {
+    background-color: beige;
+    /* border: 1px solid grey; */
+    padding: 2px;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+}
+
+.movies-display > h1, h4 {
+    text-align: center;
+}
+.no-show {
+    display: none;
+}

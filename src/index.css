@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* .grid {
+  background-color: white;
+  opacity: 0 -0.2;
+  display: grid;
+  grid-template-areas: 
+  "nav nav nav"
+  "main main main"
+  "foot foot foot";
+} */
+/* 
+.navbar {
+  grid-area: nav;
+  /* display: flex; */
+  /* justify-content: space-between;
+  align-items: center;
+/* } */ 
