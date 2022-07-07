@@ -1,6 +1,24 @@
 
 
-.app {
+.ghibli-app{
   text-align: center;
 }
 
+.navbar{
+  background: #B76E79;
+  padding: 26px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li :link {
+  text-decoration: none;
+}
+
+li {
+  margin: 25px;
+  padding: 25px;
+  display: inline;
+}
