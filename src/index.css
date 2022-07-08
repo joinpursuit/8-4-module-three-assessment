@@ -5,9 +5,53 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(202, 197, 191);
+  background-image: url("https://www.transparenttextures.com/patterns/green-gobbler.png");
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.Nav {
+
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: rgb(81, 89, 22);
+  color: white;
+}
+.Nav-list {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  }
+ .people{
+  text-align: center;
+ }
+ .mov:hover {
+  background: rgb(156, 176, 167);
+  color:rgb(238, 243, 243)
+}
+.loc {
+  text-align: center;
+  margin: 0;
+}
+.image{
+  text-align: center;
+}
+ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+}
+li {
+  list-style: none;
+  border: 2px dotted rgb(12, 12, 12);
+}
+.look {
+  display: none;
 }
