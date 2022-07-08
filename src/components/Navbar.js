@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from 'react-router-dom'
-import logo from "../logo.svg";
+import { Link } from "react-router-dom";
+
 
 export default function Navbar() {
     return (
@@ -9,7 +9,7 @@ export default function Navbar() {
           <nav>
             <Link to="/">
               <div>
-                <img src={logo} alt='GhibliApp logo' className="logo" />
+                <img src="../logo192.png" alt="logo" className="Logo" />
               </div>
             </Link>
             <h2 className="Navlink">

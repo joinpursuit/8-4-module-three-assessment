@@ -1,24 +1,24 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from "./components/Home";
-import Movie from "./components/Movie.js";
-import People from "./components/People.js";
-import LocationSearch from "./components/Location.js";
+import Movies from "./components/Movies/Movies"
+import People from "./components/People/People";
+import Locations from "./components/Locations/Locations";
 import Navbar from "./components/Navbar";
 
 export default function App() {
   return (
     <Router>
     <div className="App">
-      
+
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/movie" element={<Movie />} />
+        <Route path="/movies" element={<Movies />} />
         <Route path="/people" element={<People />} />
-        <Route path ="/location" element= {<Location/>}/>
+        <Route path ="/locations" element= {<Locations/>}/>
       </Routes>
     </div>
   </Router>

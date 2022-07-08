@@ -1,20 +1,20 @@
 import React from 'react'
 
-export default function LocationSearch(LocationSearch) {
+export default function Location({location}) {
     return (
         <div>
           <ul>
             <li>
               <span>Name: </span>
-              {LocationSearch.name}
+              {location.name}
             </li>
             <li>
               <span>Climate: </span>
-              {LocationSearch.climate}
+              {location.climate}
             </li>
             <li>
               <span>Terrain: </span>
-              {LocationSearch.terrain}
+              {location.terrain}
             </li>
           </ul>
         </div>

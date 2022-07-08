@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import PeopleSearch from "./PeopleSearch";
+import PersonCard from "./PersonCard";
 
-export default function PeopleFind() {
+export default function People() {
     const [people, setPeople] = useState([]);
   const [input, setInput] = useState("");
   const [search, setSearch] = useState();
@@ -39,7 +39,7 @@ export default function PeopleFind() {
           <button type="submit">Search</button>
         </form>
       </label>
-      {search && submit ? <PeopleSearch search={search} /> : !search && submit? <p>Not Found</p> : null }
+      {search && submit ? <PersonCard search={search} /> : !search && submit? <p>Not Found</p> : null }
     </div>
   );
 

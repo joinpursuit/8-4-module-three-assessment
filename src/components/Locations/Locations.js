@@ -1,21 +1,22 @@
-import React from 'react'
-import LocationSearch from './LocationSearch'
 
-export default function LocationFind() {
-    const [LocationFind, setLocationFind] = useState([]);
+import Location from "./Location"
+import React,{ useState, useEffect,} from 'react';
+
+export default function Locations() {
+    const [locations, setlocations] = useState([]);
     const [show,setShow]= useState(false)
     const [hidden, setHidden] = useState(true);
     useEffect(() => {
       fetch("https://ghibliapi.herokuapp.com/locations")
         .then((res) => res.json())
-        .then((data) => setLocationFind(data));
+        .then((data) => setlocations(data));
     }, []);
     const handeCLick = ()  =>  {
   show ? setShow(false) : setShow(true)
   hidden? setHidden(false) : setHidden(true)
     }
     return (
-      <div className="location">
+      <div className="locations">
         <label>
           List of Locations
           <br></br>
@@ -23,10 +24,10 @@ export default function LocationFind() {
             type="submit"
             className="show-hidden"
             onClick={handeCLick}>
-            {hidden ? "Show LocationFind" : "Hide LocationFind"}
+            {hidden ? "Show Locations" : "Hide Locations"}
           </button>
-          {show ? LocationFind.map((LocationSearch) => 
-            <LocationSearch location={location} />) : null}
+          {show ? locations.map((location) => 
+            <Locations location={location} />) : null}
   
         </label>
       </div>

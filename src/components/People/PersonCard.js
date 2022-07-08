@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function PeopleSearch({ search }) {
+export default function PersonCard({ search }) {
   return (
     <div className="search">
       <h1>Name: {search.name}</h1>
