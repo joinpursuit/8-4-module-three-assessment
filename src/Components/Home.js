@@ -4,6 +4,7 @@ import React from 'react'
     fontSize: '50px'
 
  }
+//  const sty =  styled.
 export default function Home() {
   return (
     <div>

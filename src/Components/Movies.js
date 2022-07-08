@@ -24,7 +24,7 @@ export default function Movies() {
       .then((data) => setMovies(data))
       .catch((error) => console.log(error));
   }, []);
-  function handleSubmit(e) {
+  const  handleSubmit = (e) => {
     e.preventDefault();
     setOption(e.target.value);
   }
@@ -36,7 +36,6 @@ export default function Movies() {
           <option></option>
           {movies.map((movie) => (
             <option key={movie.id} value={movie.id}>
-             
               {movie.title}
             </option>
           ))}

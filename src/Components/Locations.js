@@ -7,7 +7,7 @@ const loca = {
 
 export default function Locations() {
   const [location, setLocation] = useState([]);
-  const [showKey, setShowKey] = useState("Show Location");
+  const [showKey, setShowKey] = useState("Show Locations");
   const [name, setName] = useState(false);
   const [climate, setClimate] = useState(false);
   const [terrain, setTarrain] = useState(false);
@@ -24,10 +24,10 @@ export default function Locations() {
 
   function handleLocation(e) {
     e.preventDefault();
-    if (showKey === "Show Location") {
-      setShowKey("Hide Location");
+    if (showKey === "Show Locations") {
+      setShowKey("Hide Locations");
     } else {
-      setShowKey("Show Location");
+      setShowKey("Show Locations");
     }
 
   }
@@ -97,23 +97,24 @@ export default function Locations() {
 
 
   return (
-    <div className="loc">
+    <div className="locations">
+      
       <p style={loca}>List of Locations</p>
       <button onClick={handleLocation} type="submit">
         {showKey}
       </button>
-      {showKey === "Hide Location" ? (
+      {showKey === "Hide Locations" ? (
         <div>
-          <button onClick={sortName}>SORT BY NAME</button>
+          <button onClick={sortName}>Sort by Name</button>
 
-          <button onClick={sortClimate}>SORT BY CLIMATE</button>
-          <button onClick={sortTerrain}>SORT BY TERRAIN</button>
+          <button onClick={sortClimate}>Sort by Climate</button>
+          <button onClick={sortTerrain}>Sort by Terrain</button>
         </div>
       ) : (
         <p className="look"></p>
       )}
       <ul>
-        {showKey === "Hide Location" && option1 === true ? (
+        {showKey === "Hide Locations" && option1 === true ? (
           location.map((locate) => {
             return <LocationInfo locate={locate} />;
           })
@@ -121,7 +122,7 @@ export default function Locations() {
           <p className="look"></p>
         )}
 
-        {showKey === "Hide Location" && name === true ? (
+        {showKey === "Hide Locations" && name === true ? (
           location.map((locate) => {
             return <LocationInfo locate={locate} />;
           })
@@ -129,14 +130,14 @@ export default function Locations() {
           <p className="look"></p>
         )}
 
-        {showKey === "Hide Location" && climate === true ? (
+        {showKey === "Hide Locations" && climate === true ? (
           location.map((locate) => {
             return <LocationInfo locate={locate} />;
           })
         ) : (
           <p className="look"></p>
         )}
-        {showKey === "Hide Location" && terrain === true ? (
+        {showKey === "Hide Locations" && terrain === true ? (
           location.map((locate) => {
             return <LocationInfo locate={locate} />;
           })
