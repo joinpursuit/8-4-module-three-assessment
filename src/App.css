@@ -46,6 +46,7 @@ button {
   /* NavBar Components */
   nav {
     align-items: center;
+    text-align: center;
     display: grid;
     margin: auto;
     width: 100%;
