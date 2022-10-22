@@ -1,16 +1,14 @@
 .home-display {
-  position: fixed;
-  top: 50%;
-  left: 30%;
-  margin-top: -50px;
-  margin-left: -100px;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 25%;
 }
 
 
 /* Below animation code taken from: https://alvarotrigo.com/blog/css-text-animations/ */
 .home-display h1 {
-  max-width: 40ch;
-  text-align: center;
+  max-width: auto;
   font-size: 500%;
   color: antiquewhite;
   transform: scale(0.94);
@@ -51,7 +49,6 @@
 
 @media screen and (max-width: 620px){
   .home-display h1 {
-    max-width: 20ch;
     text-align: center;
     font-size: 300%;
   }

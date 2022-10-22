@@ -57,9 +57,10 @@ export default function App() {
           <Route exact path="/movies" element={< MoviesIndex films={films} />} />
           <Route exact path="/people" element={< PeopleIndex people={people} />} />
           <Route exact path="/locations" element={< LocationsIndex locations={locations} />} />
-        </Routes>
+        </Routes> 
+        
       </main>
-      </div>
+     </div>
       
     </div>
   );

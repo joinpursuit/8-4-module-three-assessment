@@ -15,8 +15,6 @@
   background-size: cover;
   height: 100vh;
   width: auto;
-  padding: 0;
-  margin: 0;
 }
 
 main {
@@ -26,7 +24,6 @@ main {
 button {
   margin-left: 1ch;
   margin-top: 2ch;
-
   /* Button style from: https://wpforms.com/how-to-customize-button-styles-with-css-with-examples/ */
   color: antiquewhite; /* Text color */
   background-color: transparent; /* Remove background color */
