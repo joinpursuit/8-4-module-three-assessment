@@ -14,4 +14,37 @@ nav {
   width: auto;
 }
 
+@media screen and (max-width: 620px){
+  /* NavBar Components */
+  nav {
+    display: grid;
+    width: auto;
+    grid-template-rows: repeat(4, 0.5fr);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "logo"
+      "movies"
+      "people"
+      "locations";
+  }
+
+  nav .App-logo {
+    grid-area: logo;
+    border: solid black;
+    width: 100%;
+  }
+
+  nav .Movies {
+    grid-area: movies;
+  }
+
+  nav .People {
+    grid-area: people;
+  }
+
+  nav .Locations {
+    grid-area: locations;
+  }
+
+}
 

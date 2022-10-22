@@ -47,7 +47,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <nav>
+      <nav >
         < NavBar />
       </nav>
       <div className='background-added'>

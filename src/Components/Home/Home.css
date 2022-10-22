@@ -47,8 +47,9 @@
   }
 }
 
+/* ---------------------------------------------- */
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 620px){
   .home-display h1 {
     max-width: 20ch;
     text-align: center;

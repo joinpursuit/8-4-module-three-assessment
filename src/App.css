@@ -35,56 +35,12 @@ button {
   font-size: medium;
 }
 
-@media screen and (max-width: 620px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+@media screen and (max-width: 620px) and (orientation: portrait) {
   .background-added {
     background-image: url("./logo/ghibli-phone.gif");
     background-size: cover;
     width: auto;
     height: 150vh;
-  }
-
-  /* NavBar Components */
-  nav {
-    align-items: center;
-    text-align: center;
-    display: grid;
-    margin: auto;
-    width: 100%;
-    grid-template-rows: repeat(4, 0.5fr);
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "logo"
-      "movies"
-      "people"
-      "locations";
-  }
-
-  nav .App-logo {
-    grid-area: logo;
-    grid-column: 1 / -1;
-    border: solid black;
-    text-align: center;
-    margin-right: 1ch;
-  }
-  nav .Movies {
-    grid-area: movies;
-    grid-column: 1 / -1;
-    text-align: center;
-    margin: -2ch;
-  }
-
-  nav .People {
-    grid-area: people;
-    grid-column: 1 / -1;
-    text-align: center;
-    margin: -2ch;
-  }
-
-  nav .Locations {
-    grid-area: locations;
-    grid-column: 1 / -1;
-    text-align: center;
-    margin: -2ch;
   }
 
   /* Location Component */
