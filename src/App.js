@@ -16,7 +16,7 @@ export default function App() {
 
 
   function getPeople() {
-    return fetch(`https://ghibliapi.herokuapp.com/people`)
+    return fetch(`https://ghibliapi-xn1q.onrender.com/people`)
       .then((response) => response.json())
       .then((data) => { //
         setPeople(data)
@@ -24,7 +24,7 @@ export default function App() {
   }
 
   function getFilms() {
-    return fetch(`https://ghibliapi.herokuapp.com/films`)
+    return fetch(`https://ghibliapi-xn1q.onrender.com/films`)
       .then((response) => response.json())
       .then((data) => { //
         setFilms(data)
@@ -32,7 +32,7 @@ export default function App() {
   }
 
   function getLocations() {
-    return fetch(`https://ghibliapi.herokuapp.com/locations`)
+    return fetch(`https://ghibliapi-xn1q.onrender.com/locations`)
       .then((response) => response.json())
       .then((data) => { //
         setLocations(data)
